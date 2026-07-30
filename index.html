@@ -185,6 +185,26 @@ body{
 .spot-loc{font-size:12px;color:var(--accent);margin-bottom:6px;font-weight:500}
 .spot-desc{font-size:13px;color:var(--text2);line-height:1.6}
 .spot-sum{font-size:13px;color:var(--text2);background:var(--accent-light);border-radius:8px;padding:8px 10px;margin:0 0 10px;line-height:1.6}
+.compact-list{
+  list-style:none;margin:0 0 14px;padding:0;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);box-shadow:var(--shadow);
+  overflow:hidden;counter-reset:item;
+}
+.compact-list li{
+  display:flex;gap:10px;align-items:baseline;
+  padding:9px 12px;border-bottom:1px solid var(--border);
+  font-size:14px;color:var(--text2);line-height:1.55;
+}
+.compact-list li:last-child{border-bottom:none}
+.compact-list li::before{
+  counter-increment:item;
+  content:counter(item)".";
+  flex-shrink:0;width:18px;text-align:right;
+  color:var(--accent);font-weight:700;font-size:13px;
+}
+.compact-list strong{color:var(--text);font-weight:600}
+.spot-free{display:inline-block}
 .route-list{list-style:none;margin:0;padding:0}
 .route-list li{
   font-size:13px;color:var(--text2);line-height:1.8;
@@ -462,9 +482,9 @@ D.clubs={t:"🏅 社团列表",h:'<p>学校有注册社团<strong>40个</strong>
 
 D.activity={t:"🎉 校园活动",h:'<ul><li>仲景文化艺术节</li><li>艺术演出</li><li>校运动会（举牌天团）</li><li>足球赛</li><li>中外联谊交流</li><li>音乐节</li><li>舞蹈大赛</li><li>青年嘉年华</li><li>校园歌手大赛</li><li>端午包粽子大赛等</li></ul>'};
 
-D.eat={t:"🍢 周边美食",h:'<h5>校园周边小吃街</h5><p class="spot-sum">📍 推荐地点：十二里河小吃街、经纬国际广场、府衙小吃街、U形街</p><div class="spot"><div class="spot-name">油泼面</div><div class="spot-desc">陕西人正宗制作。</div></div><div class="spot"><div class="spot-name">黄焖鸡米饭</div><div class="spot-desc">米饭 2 元无限续。</div></div><div class="spot"><div class="spot-name">麻辣烫</div><div class="spot-desc">人均约 13 元。</div></div><div class="spot"><div class="spot-name">炸鸡、烧烤</div><div class="spot-desc">夜宵首选。</div></div><h5>南阳特色美食 &amp; 特产</h5><div class="spot"><div class="spot-name">方城烩面</div><div class="spot-desc">南阳代表性面食，羊汤醇厚。</div></div><div class="spot"><div class="spot-name">新野板面</div><div class="spot-desc">面筋劲道，香辣入味。</div></div><div class="spot"><div class="spot-name">南阳黄牛</div><div class="spot-desc">本地特产，牛肉鲜香。</div></div><div class="spot"><div class="spot-name">镇平烧鸡</div><div class="spot-desc">肉质酥烂，咸香入味。</div></div><div class="spot"><div class="spot-name">郭滩烧鸡</div><div class="spot-desc">南阳传统风味熟食。</div></div><div class="spot"><div class="spot-name">浆面条</div><div class="spot-desc">南阳经典家常小吃。</div></div><div class="spot"><div class="spot-name">蒸菜</div><div class="spot-desc">本地特色，清淡爽口。</div></div><div class="spot"><div class="spot-name">西峡仲景香菇酱</div><div class="spot-desc">南阳知名特产，拌饭神器。</div></div><div class="spot"><div class="spot-name">三色鸽乳品糕点</div><div class="spot-desc">南阳本土老牌，牛奶、面包、点心。</div></div><div class="spot"><div class="spot-name">桐柏豆筋</div><div class="spot-desc">特色豆制品，凉拌、红烧都合适。</div></div><div class="spot"><div class="spot-name">唐河凉粉</div><div class="spot-desc">清爽开胃，夏季小吃。</div></div><div class="spot"><div class="spot-name">淅川酸菜</div><div class="spot-desc">本地特色腌菜。</div></div><div class="spot"><div class="spot-name">内乡卷煎</div><div class="spot-desc">传统特色小吃。</div></div><table><tr><th>类型</th><th>人均</th></tr><tr><td>小吃街</td><td>10-20元</td></tr><tr><td>小餐馆</td><td>30-50元</td></tr></table><div class="tip"><strong>新生小提示：</strong>三色鸽门店市区随处可见，适合日常买早餐；仲景香菇酱很适合买了当伴手礼带给家人。</div>'};
+D.eat={t:"🍢 周边美食",h:'<h5>校园周边小吃街</h5><p class="spot-sum">📍 推荐地点：十二里河小吃街、经纬国际广场、府衙小吃街、U形街</p><ul class="compact-list"><li><strong>油泼面</strong> — 陕西人正宗制作。</li><li><strong>黄焖鸡米饭</strong> — 米饭 2 元无限续。</li><li><strong>麻辣烫</strong> — 人均约 13 元。</li><li><strong>炸鸡、烧烤</strong> — 夜宵首选。</li></ul><h5>南阳特色美食 &amp; 特产</h5><ul class="compact-list"><li><strong>方城烩面</strong> — 南阳代表性面食，羊汤醇厚。</li><li><strong>新野板面</strong> — 面筋劲道，香辣入味。</li><li><strong>南阳黄牛</strong> — 本地特产，牛肉鲜香。</li><li><strong>镇平烧鸡</strong> — 肉质酥烂，咸香入味。</li><li><strong>郭滩烧鸡</strong> — 南阳传统风味熟食。</li><li><strong>浆面条</strong> — 南阳经典家常小吃。</li><li><strong>蒸菜</strong> — 本地特色，清淡爽口。</li><li><strong>西峡仲景香菇酱</strong> — 南阳知名特产，拌饭神器。</li><li><strong>三色鸽乳品糕点</strong> — 南阳本土老牌，牛奶、面包、点心。</li><li><strong>桐柏豆筋</strong> — 特色豆制品，凉拌、红烧都合适。</li><li><strong>唐河凉粉</strong> — 清爽开胃，夏季小吃。</li><li><strong>淅川酸菜</strong> — 本地特色腌菜。</li><li><strong>内乡卷煎</strong> — 传统特色小吃。</li></ul><table><tr><th>类型</th><th>人均</th></tr><tr><td>小吃街</td><td>10-20元</td></tr><tr><td>小餐馆</td><td>30-50元</td></tr></table><div class="tip"><strong>新生小提示：</strong>三色鸽门店市区随处可见，适合日常买早餐；仲景香菇酱很适合买了当伴手礼带给家人。</div>'};
 
-D.scenic={t:"🏯 南阳景点",h:'<p class="spot-sum">📍 推荐地点：卧龙岗武侯祠、白河湿地公园、独山森林公园、医圣文化园</p><h5>校园周边半日打卡地</h5><div class="spot"><div class="spot-name">卧龙岗武侯祠</div><div class="spot-desc">诸葛亮躬耕地，学生票半价，拍照出片。</div></div><div class="spot"><div class="spot-name">白河湿地公园 <span class="spot-free">免费</span></div><div class="spot-desc">免费打卡，淯阳桥日落、骑行散步。</div></div><div class="spot"><div class="spot-name">独山森林公园</div><div class="spot-desc">短途爬山，登顶俯瞰全城。</div></div><div class="spot"><div class="spot-name">医圣文化园</div><div class="spot-desc">纪念张仲景，医学生特色打卡点。</div></div><h5>南阳近郊 &amp; 小长假景点</h5><div class="spot"><div class="spot-name">南阳府衙</div><div class="spot-desc">古衙门遗址，周边美食云集。</div></div><div class="spot"><div class="spot-name">赊店古镇</div><div class="spot-desc">明清古建筑，山陕会馆极具特色。</div></div><div class="spot"><div class="spot-name">西峡老界岭</div><div class="spot-desc">天然氧吧，避暑好去处。</div></div><div class="spot"><div class="spot-name">西峡恐龙遗迹园</div><div class="spot-desc">恐龙化石科普景区。</div></div><div class="spot"><div class="spot-name">淅川丹江大观苑</div><div class="spot-desc">南水北调源头，湖景观光。</div></div><div class="tip"><strong>南小医说：</strong>凭学生证，大多数景区可半价或免费游览！</div>'};
+D.scenic={t:"🏯 南阳景点",h:'<p class="spot-sum">📍 推荐地点：卧龙岗武侯祠、白河湿地公园、独山森林公园、医圣文化园</p><h5>校园周边半日打卡地</h5><ul class="compact-list"><li><strong>卧龙岗武侯祠</strong> — 诸葛亮躬耕地，学生票半价，拍照出片。</li><li><strong>白河湿地公园</strong> <span class="spot-free">免费</span> — 免费打卡，淯阳桥日落、骑行散步。</li><li><strong>独山森林公园</strong> — 短途爬山，登顶俯瞰全城。</li><li><strong>医圣文化园</strong> — 纪念张仲景，医学生特色打卡点。</li></ul><h5>南阳近郊 &amp; 小长假景点</h5><ul class="compact-list"><li><strong>南阳府衙</strong> — 古衙门遗址，周边美食云集。</li><li><strong>赊店古镇</strong> — 明清古建筑，山陕会馆极具特色。</li><li><strong>西峡老界岭</strong> — 天然氧吧，避暑好去处。</li><li><strong>西峡恐龙遗迹园</strong> — 恐龙化石科普景区。</li><li><strong>淅川丹江大观苑</strong> — 南水北调源头，湖景观光。</li></ul><div class="tip"><strong>南小医说：</strong>凭学生证，大多数景区可半价或免费游览！</div>'};
 
 D.faq={t:"💬 常见问题",h:'<h5>Q：宿舍有空调吗？</h5><p><strong>有空调！也有风扇！</strong>夏天不怕热。</p><h5>Q：宿舍用电功率有限制吗？</h5><p><strong>有。</strong>宿舍限电最大 600W，不要使用大功率电器（如电锅、热得快、电暖器等），否则容易跳闸。</p><h5>Q：宿舍有热水吗？</h5><p><strong>淋浴有热水。</strong>每层还有开水器/直饮水机，打水方便。</p><h5>Q：可以带电脑吗？</h5><p>可以。部分专业需要电脑完成作业。</p><h5>Q：可以转专业吗？</h5><p>可以，大一可申请，需通过笔试+面试。</p><h5>Q：可以专升本吗？</h5><p>可以，大三参加统招专升本考试。</p><h5>Q：学校允许外卖吗？</h5><p>可以点外卖，到校门口取。</p>'};
 
