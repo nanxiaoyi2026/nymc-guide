@@ -21,6 +21,14 @@
   --shadow:0 1px 3px rgba(0,0,0,.06);
   --shadow-md:0 4px 12px rgba(0,0,0,.08);
 }
+html[data-theme="dark"]{
+  --bg:#0f172a;--card:#1e293b;--bg2:#182233;--hover:#243447;
+  --text:#f1f5f9;--text2:#cbd5e1;--muted:#94a3b8;
+  --border:#334155;--accent:#60a5fa;--accent2:#93c5fd;--accent-light:rgba(96,165,250,.15);
+  --green:#4ade80;--orange:#fbbf24;--red:#f87171;
+  --shadow:0 1px 3px rgba(0,0,0,.25);
+  --shadow-md:0 4px 12px rgba(0,0,0,.35);
+}
 html{-webkit-text-size-adjust:100%}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Helvetica,sans-serif;
@@ -37,6 +45,7 @@ body{
   display:flex;align-items:center;padding:0 14px;
   max-width:600px;margin:0 auto;
 }
+html[data-theme="dark"] .navbar{background:rgba(15,23,42,.95)}
 .navbar-title{font-size:16px;font-weight:600;flex:1;color:var(--text)}
 .navbar-title small{font-size:10px;color:var(--muted);font-weight:400;margin-left:6px}
 .navbar-btn{
@@ -276,6 +285,8 @@ body{
 .tip.warn strong{color:var(--orange)}
 .tip.danger{background:#fee2e2;border-left-color:var(--red)}
 .tip.danger strong{color:var(--red)}
+html[data-theme="dark"] .tip.warn{background:#451a03}
+html[data-theme="dark"] .tip.danger{background:#450a0a}
 .tag{
   display:inline-block;font-size:10px;font-weight:600;
   padding:1px 6px;border-radius:4px;margin-left:4px;
@@ -368,7 +379,7 @@ body{
 }
 .po-prov{
   display:inline-flex;align-items:center;gap:3px;
-  background:#fff;border:1px solid var(--border);
+  background:var(--card);border:1px solid var(--border);
   border-radius:5px;padding:1px 6px;font-size:12px;color:var(--text2);
 }
 .po-prov b{background:none;padding:0;color:var(--accent);font-weight:700;font-size:13px}
@@ -591,17 +602,17 @@ function buildDrawer(){
   
   var drawer=document.createElement("div");
   drawer.id="drawer";
-  drawer.style.cssText="position:fixed;top:0;right:0;width:280px;max-width:80vw;height:100vh;background:#fff;z-index:260;transform:translateX(100%);transition:transform .25s;overflow-y:auto;padding-top:20px;";
+  drawer.style.cssText="position:fixed;top:0;right:0;width:280px;max-width:80vw;height:100vh;background:var(--card);z-index:260;transform:translateX(100%);transition:transform .25s;overflow-y:auto;padding-top:20px;";
   
-  var headHtml='<div style="padding:12px 20px;border-bottom:1px solid #e0e4e8;display:flex;align-items:center;justify-content:space-between;">';
-  headHtml+='<h3 style="font-size:16px;font-weight:600;">📋 目录</h3>';
-  headHtml+='<button onclick="toggleDrawer()" style="width:28px;height:28px;border:none;background:#f5f6f8;border-radius:6px;font-size:16px;cursor:pointer;color:#555;">×</button>';
+  var headHtml='<div style="padding:12px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">';
+  headHtml+='<h3 style="font-size:16px;font-weight:600;color:var(--text);">📋 目录</h3>';
+  headHtml+='<button onclick="toggleDrawer()" style="width:28px;height:28px;border:none;background:var(--bg2);border-radius:6px;font-size:16px;cursor:pointer;color:var(--text2);">×</button>';
   headHtml+='</div>';
   
   var bodyHtml="";
   for(var i=0;i<TOC.length;i++){
     var t=TOC[i];
-    bodyHtml+='<div onclick="showDetail(\''+t.k+'\');toggleDrawer();" style="display:flex;align-items:center;gap:10px;padding:14px 20px;cursor:pointer;font-size:14px;color:#1a1a2e;border-bottom:1px solid #f0f4f8;">';
+    bodyHtml+='<div onclick="showDetail(\''+t.k+'\');toggleDrawer();" style="display:flex;align-items:center;gap:10px;padding:14px 20px;cursor:pointer;font-size:14px;color:var(--text);border-bottom:1px solid var(--border);">';
     bodyHtml+='<span style="font-size:16px;width:22px;text-align:center;">'+t.i+'</span>';
     bodyHtml+='<span>'+t.t+'</span>';
     bodyHtml+='</div>';
