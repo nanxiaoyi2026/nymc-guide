@@ -169,6 +169,27 @@ body{
 .note-list li::before{
   content:"•";color:var(--orange);position:absolute;left:4px;font-weight:700;
 }
+.spot{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:12px 14px;
+  margin-bottom:8px;box-shadow:var(--shadow);
+}
+.spot-name{
+  font-size:15px;font-weight:700;color:var(--text);
+  margin-bottom:3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+}
+.spot-free{
+  font-size:11px;font-weight:700;color:#16a34a;
+  background:#dcfce7;border-radius:6px;padding:1px 7px;
+}
+.spot-loc{font-size:12px;color:var(--accent);margin-bottom:6px;font-weight:500}
+.spot-desc{font-size:13px;color:var(--text2);line-height:1.6}
+.route-list{list-style:none;margin:0;padding:0}
+.route-list li{
+  font-size:13px;color:var(--text2);line-height:1.8;
+  padding-left:18px;position:relative;margin-bottom:5px;
+}
+.route-list li::before{content:"▫️";position:absolute;left:0}
 .sheet-mask{
   position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:300;
   display:none;align-items:flex-end;justify-content:center;
@@ -352,7 +373,7 @@ body{
 
   <div class="sec-title">周边生活</div>
   <div class="card" onclick="showDetail('eat')"><div class="card-content"><h4>🍢 周边美食</h4><p>油泼面、黄焖鸡、方城烩面…</p></div><span class="arrow">›</span></div>
-  <div class="card" onclick="showDetail('scenic')"><div class="card-content"><h4>🏯 南阳景点</h4><p>武侯祠、医圣祠，学生证半价！</p></div><span class="arrow">›</span></div>
+  <div class="card" onclick="showDetail('scenic')"><div class="card-content"><h4>🏯 南阳景点</h4><p>武侯祠、白河湿地、老界岭…学生证半价</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">答疑解惑</div>
   <div class="card" onclick="showDetail('faq')"><div class="card-content"><h4>💬 常见问题</h4><p>有空调吗？有热水吗？可以转专业吗？</p></div><span class="arrow">›</span></div>
@@ -442,7 +463,7 @@ D.activity={t:"🎉 校园活动",h:'<ul><li>仲景文化艺术节</li><li>艺�
 
 D.eat={t:"🍢 周边美食",h:'<h5>校园周边小吃街</h5><p>📍 <strong>十二里河小吃街、经纬国际广场、府衙小吃街、U形街</strong>（学校周边觅食地）</p><ul><li>油泼面（陕西人正宗制作）</li><li>黄焖鸡米饭（米饭2元无限续）</li><li>麻辣烫（人均约13元）</li><li>炸鸡、烧烤（夜宵首选）</li></ul><h5>南阳特色美食</h5><ul><li>方城烩面 — 南阳代表性面食</li><li>新野板面 — 劲道爽滑</li><li>南阳黄牛 — 肉质鲜美</li></ul><table><tr><th>类型</th><th>人均</th></tr><tr><td>小吃街</td><td>10-20元</td></tr><tr><td>小餐馆</td><td>30-50元</td></tr></table>'};
 
-D.scenic={t:"🏯 南阳景点",h:'<h5>南阳四大名景</h5><ul><li><strong>武侯祠</strong>：诸葛亮躬耕之地，距孔明校区一步之遥！</li><li><strong>医圣祠</strong>：纪念张仲景的祠堂</li><li><strong>张衡博物馆</strong>：科圣张衡故里</li><li><strong>南阳府衙</strong>：历史文化景点</li></ul><div class="tip"><strong>南小医说：</strong>凭学生证可半价或免费游览大多数景区！</div>'};
+D.scenic={t:"🏯 南阳景点",h:'<h5>学校周边｜半天打卡</h5><div class="spot"><div class="spot-name">卧龙岗武侯祠</div><div class="spot-loc">📍卧龙区卧龙路 · 公交直达</div><div class="spot-desc">诸葛亮躬耕之地、"三顾茅庐"发源地，古建筑很出片；凭学生证门票半价，室友结伴打卡首选。</div></div><div class="spot"><div class="spot-name">白河国家湿地公园 <span class="spot-free">免费</span></div><div class="spot-loc">📍淯阳桥网红打卡点</div><div class="spot-desc">傍晚适合骑行、散步、看日落，南阳本地人休闲聚集地。</div></div><div class="spot"><div class="spot-name">独山森林公园</div><div class="spot-loc">📍卧龙区内 · 短途爬山</div><div class="spot-desc">难度低，登顶可俯瞰南阳城区；独山玉原产地，周末运动散心好去处。</div></div><div class="spot"><div class="spot-name">医圣文化园（医圣祠）</div><div class="spot-loc">📍纪念医圣张仲景</div><div class="spot-desc">学医同学非常适合参观，中医文化浓厚，园区环境清幽。</div></div><h5>近郊｜周末一日游</h5><div class="spot"><div class="spot-name">南阳府衙</div><div class="spot-loc">📍市中心 · 古代官府遗址</div><div class="spot-desc">周边小吃众多，逛古迹顺便美食打卡。</div></div><div class="spot"><div class="spot-name">赊店古镇（社旗）</div><div class="spot-loc">📍社旗县 · 原生态明清古镇</div><div class="spot-desc">老街免费，山陕会馆雕刻十分震撼，烟火气息浓厚。</div></div><h5>小长假｜远郊 5A 景区</h5><div class="spot"><div class="spot-name">西峡老界岭</div><div class="spot-loc">📍天然森林氧吧 · 避暑胜地</div><div class="spot-desc">夏天出游佳，可观赏云海山林。</div></div><div class="spot"><div class="spot-name">西峡恐龙遗迹园</div><div class="spot-loc">📍世界级恐龙蛋化石群</div><div class="spot-desc">科普游玩两不误，适合带家人朋友。</div></div><div class="spot"><div class="spot-name">淅川丹江大观苑</div><div class="spot-loc">📍南水北调水源地</div><div class="spot-desc">宽阔湖景，可乘船游览。</div></div><h5>新生简易出行路线</h5><ul class="route-list"><li>半日短途：卧龙岗 → 白河湿地公园看日落</li><li>市区一日游：卧龙岗 → 医圣祠 → 白河夜景</li><li>周末休闲：独山爬山</li></ul><div class="tip"><strong>南小医说：</strong>凭学生证，大多数景区可半价或免费游览！</div>'};
 
 D.faq={t:"💬 常见问题",h:'<h5>Q：宿舍有空调吗？</h5><p><strong>有空调！也有风扇！</strong>夏天不怕热。</p><h5>Q：宿舍用电功率有限制吗？</h5><p><strong>有。</strong>宿舍限电最大 600W，不要使用大功率电器（如电锅、热得快、电暖器等），否则容易跳闸。</p><h5>Q：宿舍有热水吗？</h5><p><strong>淋浴有热水。</strong>每层还有开水器/直饮水机，打水方便。</p><h5>Q：可以带电脑吗？</h5><p>可以。部分专业需要电脑完成作业。</p><h5>Q：可以转专业吗？</h5><p>可以，大一可申请，需通过笔试+面试。</p><h5>Q：可以专升本吗？</h5><p>可以，大三参加统招专升本考试。</p><h5>Q：学校允许外卖吗？</h5><p>可以点外卖，到校门口取。</p>'};
 
