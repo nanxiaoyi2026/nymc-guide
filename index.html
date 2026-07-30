@@ -211,6 +211,12 @@ body{
   padding-left:18px;position:relative;margin-bottom:5px;
 }
 .route-list li::before{content:"▫️";position:absolute;left:0}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0;border-radius:8px}
+.tbl-plan{width:100%;min-width:560px;border-collapse:collapse;font-size:12px}
+.tbl-plan th,.tbl-plan td{border:1px solid var(--border);padding:6px 8px;text-align:center;white-space:nowrap}
+.tbl-plan th{background:var(--accent-light);color:var(--accent);font-weight:700}
+.tbl-plan td:first-child{text-align:left}
+.tbl-plan td.hot{color:var(--accent);font-weight:600}
 .sheet-mask{
   position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:300;
   display:none;align-items:flex-end;justify-content:center;
@@ -384,6 +390,7 @@ body{
   <div class="sec-title">学校介绍</div>
   <div class="card" onclick="showDetail('overview')"><div class="card-content"><h4>🏫 学校简介</h4><p>70+年办学历史，1316亩，含校区分布</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('major-list')"><div class="card-content"><h4>📖 全部专业一览</h4><p>26个专业详细介绍 · 培养目标/主干课程/就业方向/学费</p></div><span class="arrow">›</span></div>
+  <div class="card" onclick="showDetail('plan')"><div class="card-content"><h4>📊 2026招生计划</h4><p>河南分专业计划、学费、招生人数</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">生活服务</div>
   <div class="card" onclick="showDetail('express')"><div class="card-content"><h4>📦 快递</h4><p>校内菜鸟驿站，快递地址填写</p></div><span class="arrow">›</span></div>
@@ -489,6 +496,8 @@ D.scenic={t:"🏯 南阳景点",h:'<p class="spot-sum">📍 推荐地点：卧�
 
 D.scholarship={t:"🎓 奖励资助",h:'<h5>资助体系</h5><p>学校高度重视学生资助工作，本着<strong>“一切为了学生、为了学生一切”</strong>的办学理念，以<strong>“不让一名学生因家庭经济困难而辍学”</strong>为目标，全方位建立起<strong>“奖、助、贷、免、补、勤”</strong>等多措并举、相互补充的学生资助体系。</p><h5>资助项目</h5><ul class="compact-list"><li><strong>国家奖学金</strong> — 10000 元/生/年</li><li><strong>国家励志奖学金</strong> — 6000 元/生/年</li><li><strong>国家助学金</strong> — 分三档：4400 元、3700 元、3000 元/生/年</li><li><strong>退役士兵国家助学金</strong> — 3700 元/生/年</li><li><strong>助学贷款</strong> — 家庭经济困难学生可申请高校国家助学贷款，也可在入学前到生源地学生资助中心申请生源地信用助学贷款，每生每年最高 20000 元</li><li><strong>学校优秀学生奖学金</strong> — 分三档：1000 元、600 元、400 元/生/年</li><li><strong>捐赠奖（助）学金、勤工助学、临时困难救助等</strong></li></ul><h5>家庭经济困难新生</h5><p>被我校录取的家庭经济困难新生，如暂时筹集不齐学费和住宿费，报到时可通过<strong>“绿色通道”</strong>先办理入学手续，暂缓缴费。入学后根据学生具体情况开展困难认定，采取不同措施给予资助。</p><p>对应征入伍服义务兵役、招收为士官的学生进行学费补偿或对国家助学贷款中用于学费的部分实行代偿；服役期间按国家有关规定保留学籍或入学资格，退役后入学（自主就业）或复学的学生，实行学费减免。</p><div class="tip warn"><strong>南小医提醒：</strong>具体金额、申请条件与流程以学校学生资助管理中心当年通知为准。</div>'};
 
+D.plan={t:"📊 2026招生计划",h:'<p>学校代码 <strong>6239</strong>（中外合作办学 <strong>6323</strong>）。以下为 2026 年河南省分专业招生计划，<strong>最终以河南省教育考试院公布为准</strong>。</p><div class="table-scroll"><table class="tbl-plan"><tr><th>专业</th><th>录取批次</th><th>历史类</th><th>物理类</th><th>合计</th><th>学费(元/年)</th></tr><tr><td>临床医学</td><td>高职（专科）提前批</td><td>110</td><td>289</td><td>399</td><td>5,280</td></tr><tr><td>口腔医学</td><td>高职（专科）提前批</td><td>120</td><td>308</td><td>428</td><td>5,280</td></tr><tr><td>中医学</td><td>高职（专科）提前批</td><td>52</td><td>51</td><td>103</td><td>4,800</td></tr><tr><td>中医骨伤</td><td>高职（专科）提前批</td><td>59</td><td>60</td><td>119</td><td>4,800</td></tr><tr><td>针灸推拿</td><td>高职（专科）提前批</td><td>37</td><td>37</td><td>74</td><td>4,800</td></tr><tr><td>体育保健与康复</td><td>体育高职（专科）批</td><td>120</td><td>120</td><td>240</td><td>4,200</td></tr><tr><td>护理</td><td>普通高职（专科）批</td><td>696</td><td>241</td><td>937</td><td>5,280</td></tr><tr><td>助产</td><td>普通高职（专科）批</td><td>60</td><td>60</td><td>120</td><td>4,800</td></tr><tr><td>药学</td><td>普通高职（专科）批</td><td>58</td><td>322</td><td>380</td><td>4,800</td></tr><tr><td>中药学</td><td>普通高职（专科）批</td><td>160</td><td>18</td><td>178</td><td>4,800</td></tr><tr><td>医学检验技术</td><td>普通高职（专科）批</td><td>67</td><td>102</td><td>169</td><td>4,800</td></tr><tr><td>医学影像技术</td><td>普通高职（专科）批</td><td>38</td><td>117</td><td>155</td><td>4,800</td></tr><tr><td>眼视光技术</td><td>普通高职（专科）批</td><td>160</td><td>238</td><td>398</td><td>4,800</td></tr><tr><td>康复治疗技术</td><td>普通高职（专科）批</td><td>136</td><td>137</td><td>273</td><td>4,800</td></tr><tr><td>计算机网络技术</td><td>普通高职（专科）批</td><td>33</td><td>77</td><td>110</td><td>4,200</td></tr><tr><td>卫生信息管理</td><td>普通高职（专科）批</td><td>50</td><td>50</td><td>100</td><td>4,800</td></tr><tr><td>健康管理</td><td>普通高职（专科）批</td><td>119</td><td>120</td><td>239</td><td>4,800</td></tr><tr><td>中医养生保健</td><td>普通高职（专科）批</td><td>160</td><td>160</td><td>320</td><td>4,800</td></tr><tr><td>医学美容技术</td><td>普通高职（专科）批</td><td>30</td><td>31</td><td>61</td><td>4,800</td></tr><tr><td>中医康复技术</td><td>普通高职（专科）批</td><td>50</td><td>50</td><td>100</td><td>4,800</td></tr><tr><td>健康大数据管理与服务</td><td>普通高职（专科）批</td><td>30</td><td>30</td><td>60</td><td>4,800</td></tr><tr><td>智能医疗装备技术</td><td>普通高职（专科）批</td><td>33</td><td>77</td><td>110</td><td>4,200</td></tr><tr><td>中草药栽培与加工技术</td><td>普通高职（专科）批</td><td>48</td><td>12</td><td>60</td><td>4,200</td></tr><tr><td>口腔卫生保健</td><td>普通高职（专科）批</td><td>40</td><td>40</td><td>80</td><td>4,800</td></tr><tr><td>智慧健康养老服务与管理</td><td>普通高职（专科）批</td><td>40</td><td>40</td><td>80</td><td>3,700</td></tr><tr><td>食品营养与健康</td><td>普通高职（专科）批</td><td>55</td><td>55</td><td>110</td><td>4,200</td></tr><tr><td>临床医学（其他类）</td><td>普通高职（专科）批</td><td>21</td><td>49</td><td>70</td><td>5,280</td></tr><tr><td>中医学（其他类）</td><td>普通高职（专科）批</td><td>26</td><td>26</td><td>52</td><td>4,800</td></tr><tr><td>针灸推拿（其他类）</td><td>普通高职（专科）批</td><td>21</td><td>22</td><td>43</td><td>4,800</td></tr><tr><td>临床医学（河南省大学生村医定向免费培养）</td><td>普通高职（专科）批</td><td>15</td><td>35</td><td>50</td><td>5,280</td></tr><tr><td>中医学（河南省大学生村医定向免费培养）</td><td>普通高职（专科）批</td><td>50</td><td>50</td><td>100</td><td>4,800</td></tr><tr><td>护理（中外合作办学）</td><td>普通高职（专科）批</td><td>105</td><td>45</td><td>150</td><td>16,000</td></tr><tr><td>药学（中外合作办学）</td><td>普通高职（专科）批</td><td>75</td><td>75</td><td>150</td><td>16,000</td></tr><tr><td>医学影像技术（中外合作办学）</td><td>普通高职（专科）批</td><td>75</td><td>75</td><td>150</td><td>16,000</td></tr></table></div><div class="tip warn"><strong>温馨提示：</strong>学制均为三年；所有专业均不提科目要求；志愿填报时专业代码请查询「南阳医学高等专科学校招生信息网」。</div>'};
+
 D.faq={t:"💬 常见问题",h:'<h5>Q：宿舍有空调吗？</h5><p><strong>有空调！也有风扇！</strong>夏天不怕热。</p><h5>Q：宿舍用电功率有限制吗？</h5><p><strong>有。</strong>宿舍限电最大 600W，不要使用大功率电器（如电锅、热得快、电暖器等），否则容易跳闸。</p><h5>Q：宿舍有热水吗？</h5><p><strong>淋浴有热水。</strong>每层还有开水器/直饮水机，打水方便。</p><h5>Q：可以带电脑吗？</h5><p>可以。部分专业需要电脑完成作业。</p><h5>Q：可以转专业吗？</h5><p>可以，大一可申请，需通过笔试+面试。</p><h5>Q：可以专升本吗？</h5><p>可以，大三参加统招专升本考试。</p><h5>Q：学校允许外卖吗？</h5><p>可以点外卖，到校门口取。</p>'};
 
 D.fraud={t:"⚠ 防诈骗",h:'<h5>常见校园诈骗</h5><ul><li>刷单兼职 — 先垫付后返款，必被骗</li><li>冒充客服 — "您的快递有问题…"</li><li>冒充学长学姐 — 推销学习卡</li><li>兼职押金 — 收钱后跑路</li><li>校园贷 — 低息诱惑，实为高利贷</li></ul><h5>防骗原则</h5><ul><li>不轻信：陌生来电、短信、链接</li><li>不透露：身份证号、银行卡、验证码</li><li>不转账：陌生账户不转账</li><li>必核实：可疑信息先核实</li></ul><div class="tip danger"><strong>南小医提醒：</strong>天上不会掉馅饼，馅饼下面是陷阱！遇到可疑情况立即拨打110。</div>'};
@@ -529,6 +538,7 @@ var TOC=[
   {i:"🎖",t:"军训攻略",k:"military"},
   {i:"🏫",t:"学校简介",k:"overview"},
   {i:"📖",t:"全部专业一览",k:"major-list"},
+  {i:"📊",t:"2026招生计划",k:"plan"},
   {i:"📦",t:"快递",k:"express"},
   {i:"💊",t:"校医院",k:"clinic"},
   {i:"🏅",t:"社团列表",k:"clubs"},
