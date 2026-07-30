@@ -202,6 +202,14 @@ body{
   display:flex;align-items:center;
 }
 .major-cat:first-child{margin-top:0}
+.qr-placeholder{
+  border:2px dashed var(--border);border-radius:12px;
+  padding:26px 16px;margin:12px 0;text-align:center;
+  color:var(--text2);font-size:14px;line-height:1.7;
+  background:var(--bg2);
+}
+.qr-placeholder span{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+.qr-placeholder img{width:180px;height:180px;border-radius:8px;margin:0 auto 8px;display:block}
 .contact-card{
   background:linear-gradient(135deg,#3b82f6,#60a5fa);
   border-radius:var(--radius-l);padding:24px 16px;
@@ -252,6 +260,7 @@ body{
     <div class="quick-item" onclick="showDetail('canteen')"><div class="qi-icon qi-orange">食</div><div class="qi-label">食堂</div></div>
     <div class="quick-item" onclick="showDetail('major-change')"><div class="qi-icon qi-green">转</div><div class="qi-label">转专业</div></div>
     <div class="quick-item" onclick="showDetail('zhuanben')"><div class="qi-icon qi-purple">本</div><div class="qi-label">专升本</div></div>
+    <div class="quick-item" onclick="showDetail('freshman-group')"><div class="qi-icon qi-blue">群</div><div class="qi-label">新生群</div></div>
     <div class="quick-item" onclick="showDetail('items')"><div class="qi-icon qi-cyan">物</div><div class="qi-label">必带清单</div></div>
     <div class="quick-item" onclick="showDetail('transport')"><div class="qi-icon qi-teal">车</div><div class="qi-label">交通</div></div>
     <div class="quick-item" onclick="scrollToContact()"><div class="qi-icon qi-pink">联</div><div class="qi-label">联系我</div></div>
@@ -262,6 +271,7 @@ body{
   <div class="card" onclick="showDetail('canteen')"><div class="card-content"><h4>🍜 食堂怎么样？</h4><p>两个食堂 + 周边小吃街，便宜又好吃…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('major-change')"><div class="card-content"><h4>🔄 转专业政策</h4><p>大一可申请，笔试+面试，9月和春季各一次…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('zhuanben')"><div class="card-content"><h4>📈 专升本</h4><p>统招专升本含金量最高，可报新乡医学院等…</p></div><span class="arrow">›</span></div>
+  <div class="card" onclick="showDetail('freshman-group')"><div class="card-content"><h4>💬 新生群</h4><p>加群答疑、组队拼车、二手闲置…</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">入学准备</div>
   <div class="card" onclick="showDetail('items')"><div class="card-content"><h4>🎒 必带物品清单</h4><p>证件、生活用品、医药类…完整清单</p></div><span class="arrow">›</span></div>
@@ -351,6 +361,7 @@ D["major-change"]={t:"🔄 转专业政策",h:'<h5>申请条件</h5><ul><li>仅�
 
 D.zhuanben={t:"📈 专升本",h:'<h5>统招专升本（推荐，含金量最高）</h5><ul><li>面向应届专科毕业生（第三年）</li><li>考试科目：<strong>公共英语+专业课</strong></li><li>录取后进入本科院校两年全日制学习</li><li>获得普通高等教育本科毕业证和学士学位证</li><li>可报考：新乡医学院、河南大学、河南科技大学等</li><li>报名时间：约3-4月</li></ul><h5>成人高等教育专升本</h5><ul><li>成人高考专升本（每年10月）</li><li>自考专升本（无入学考试）</li><li>国家开放大学专升本</li></ul><div class="tip"><strong>南小医建议：</strong>大一就要开始准备英语，公共英语是必考科目！</div>'};
 
+D["freshman-group"]={t:"💬 新生群",h:'<h5>为什么要加群</h5><ul><li><strong>报到前答疑：</strong>宿舍、专业、军训、转专业…群里直接问学长</li><li><strong>组队拼车：</strong>开学一起到校，分摊车费更划算</li><li><strong>二手闲置：</strong>转卖教材、自行车、收纳用品</li><li><strong>通知提醒：</strong>重要时间节点不错过</li></ul><h5>加群方式</h5><p>👉 <strong>长按识别下方二维码</strong>即可进群；若群满或二维码过期，加「南小医」微信（见底部「联系我」）拉你进群。</p><div class="qr-placeholder"><span>📱 群二维码待更新</span><span>把新生群二维码图片发我，我帮你嵌进来</span></div><div class="tip warn"><strong>群规：</strong>禁止广告、刷屏、不良信息，违规移出。</div>'};
 D.items={t:"🎒 必带物品清单",h:'<h5>证件类（必带）</h5><ul><li>录取通知书</li><li>身份证及复印件</li><li>团员证及转团组织关系</li><li>学籍档案（<strong style="color:#ef4444">不可开封！</strong>）</li><li>户口本复印件</li><li>近期免冠照片</li></ul><h5>生活类</h5><ul><li>被褥（四季衣物，南阳春秋短，夏热冬冷）</li><li>洗漱用品、拖鞋</li><li>插排（必备，大功率禁用）</li></ul><h5>医药类</h5><ul><li>感冒药、肠胃药、创可贴、体温计</li></ul><div class="tip warn"><strong>不建议携带：</strong>大功率电器、宠物、贵重物品。</div>'};
 
 D.register={t:"🏫 报到流程",h:'<h5>报到时间</h5><p>以录取通知书上注明的时间为准。</p><h5>所需材料</h5><ul><li>录取通知书原件</li><li>身份证原件及复印件</li><li>学籍档案（密封状态）</li><li>团员证及转团材料</li><li>近期免冠照片</li></ul><h5>流程</h5><ol><li>查看迎新指示牌，找到系院报到点</li><li>提交材料，领取一卡通</li><li>领取宿舍钥匙，办理入住</li><li>熟悉校园环境</li><li>参加新生入学教育</li></ol><div class="tip danger"><strong>重要：</strong>学籍档案不可自行开封！</div>'};
@@ -409,6 +420,7 @@ var TOC=[
   {i:"🍜",t:"食堂",k:"canteen"},
   {i:"🔄",t:"转专业",k:"major-change"},
   {i:"📈",t:"专升本",k:"zhuanben"},
+  {i:"💬",t:"新生群",k:"freshman-group"},
   {i:"🎒",t:"必带清单",k:"items"},
   {i:"🏫",t:"报到流程",k:"register"},
   {i:"🚌",t:"交通指南",k:"transport"},
