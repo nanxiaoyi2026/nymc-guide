@@ -252,7 +252,6 @@ body{
     <div class="quick-item" onclick="showDetail('canteen')"><div class="qi-icon qi-orange">食</div><div class="qi-label">食堂</div></div>
     <div class="quick-item" onclick="showDetail('major-change')"><div class="qi-icon qi-green">转</div><div class="qi-label">转专业</div></div>
     <div class="quick-item" onclick="showDetail('zhuanben')"><div class="qi-icon qi-purple">本</div><div class="qi-label">专升本</div></div>
-    <div class="quick-item" onclick="showDetail('tuition')"><div class="qi-icon qi-red">费</div><div class="qi-label">学费</div></div>
     <div class="quick-item" onclick="showDetail('items')"><div class="qi-icon qi-cyan">物</div><div class="qi-label">必带清单</div></div>
     <div class="quick-item" onclick="showDetail('transport')"><div class="qi-icon qi-teal">车</div><div class="qi-label">交通</div></div>
     <div class="quick-item" onclick="scrollToContact()"><div class="qi-icon qi-pink">联</div><div class="qi-label">联系我</div></div>
@@ -263,7 +262,6 @@ body{
   <div class="card" onclick="showDetail('canteen')"><div class="card-content"><h4>🍜 食堂怎么样？</h4><p>两个食堂 + 周边小吃街，便宜又好吃…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('major-change')"><div class="card-content"><h4>🔄 转专业政策</h4><p>大一可申请，笔试+面试，9月和春季各一次…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('zhuanben')"><div class="card-content"><h4>📈 专升本</h4><p>统招专升本含金量最高，可报新乡医学院等…</p></div><span class="arrow">›</span></div>
-  <div class="card" onclick="showDetail('tuition')"><div class="card-content"><h4>💰 学费多少？</h4><p>5280 / 4800 / 4200 元/年，看专业…</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">入学准备</div>
   <div class="card" onclick="showDetail('items')"><div class="card-content"><h4>🎒 必带物品清单</h4><p>证件、生活用品、医药类…完整清单</p></div><span class="arrow">›</span></div>
@@ -353,8 +351,6 @@ D["major-change"]={t:"🔄 转专业政策",h:'<h5>申请条件</h5><ul><li>仅�
 
 D.zhuanben={t:"📈 专升本",h:'<h5>统招专升本（推荐，含金量最高）</h5><ul><li>面向应届专科毕业生（第三年）</li><li>考试科目：<strong>公共英语+专业课</strong></li><li>录取后进入本科院校两年全日制学习</li><li>获得普通高等教育本科毕业证和学士学位证</li><li>可报考：新乡医学院、河南大学、河南科技大学等</li><li>报名时间：约3-4月</li></ul><h5>成人高等教育专升本</h5><ul><li>成人高考专升本（每年10月）</li><li>自考专升本（无入学考试）</li><li>国家开放大学专升本</li></ul><div class="tip"><strong>南小医建议：</strong>大一就要开始准备英语，公共英语是必考科目！</div>'};
 
-D.tuition={t:"💰 学费标准",h:'<h5>学费（元/年）</h5><table><tr><th>专业类别</th><th>学费</th></tr><tr><td>临床医学、口腔医学、护理</td><td><strong>5280</strong></td></tr><tr><td>其他普通医学类</td><td><strong>4800</strong></td></tr><tr><td>普通理科类</td><td>4200</td></tr><tr><td>普通文科类</td><td>3700</td></tr><tr><td>中外合作办学</td><td><strong>16000</strong></td></tr></table><h5>住宿费</h5><p>仲景校区750元/年，孔明校区700元/年</p><div class="tip"><strong>提示：</strong>家庭困难可申请国家助学贷款（最高20000元/年）、国家助学金（平均3700元/年）。</div>'};
-
 D.items={t:"🎒 必带物品清单",h:'<h5>证件类（必带）</h5><ul><li>录取通知书</li><li>身份证及复印件</li><li>团员证及转团组织关系</li><li>学籍档案（<strong style="color:#ef4444">不可开封！</strong>）</li><li>户口本复印件</li><li>近期免冠照片</li></ul><h5>生活类</h5><ul><li>被褥（四季衣物，南阳春秋短，夏热冬冷）</li><li>洗漱用品、拖鞋</li><li>插排（必备，大功率禁用）</li></ul><h5>医药类</h5><ul><li>感冒药、肠胃药、创可贴、体温计</li></ul><div class="tip warn"><strong>不建议携带：</strong>大功率电器、宠物、贵重物品。</div>'};
 
 D.register={t:"🏫 报到流程",h:'<h5>报到时间</h5><p>以录取通知书上注明的时间为准。</p><h5>所需材料</h5><ul><li>录取通知书原件</li><li>身份证原件及复印件</li><li>学籍档案（密封状态）</li><li>团员证及转团材料</li><li>近期免冠照片</li></ul><h5>流程</h5><ol><li>查看迎新指示牌，找到系院报到点</li><li>提交材料，领取一卡通</li><li>领取宿舍钥匙，办理入住</li><li>熟悉校园环境</li><li>参加新生入学教育</li></ol><div class="tip danger"><strong>重要：</strong>学籍档案不可自行开封！</div>'};
@@ -413,7 +409,6 @@ var TOC=[
   {i:"🍜",t:"食堂",k:"canteen"},
   {i:"🔄",t:"转专业",k:"major-change"},
   {i:"📈",t:"专升本",k:"zhuanben"},
-  {i:"💰",t:"学费",k:"tuition"},
   {i:"🎒",t:"必带清单",k:"items"},
   {i:"🏫",t:"报到流程",k:"register"},
   {i:"🚌",t:"交通指南",k:"transport"},
