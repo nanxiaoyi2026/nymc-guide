@@ -110,6 +110,65 @@ body{
 .qi-yellow{background:#eab308}
 .qi-rose{background:#f43f5e}
 .qi-emerald{background:#10b981}
+.process-wrap{
+  background:var(--card);border-radius:var(--radius);
+  padding:4px 16px;border:1px solid var(--border);
+  box-shadow:var(--shadow);margin-bottom:12px;
+}
+.process-step{
+  display:flex;gap:12px;padding:14px 0;
+  border-bottom:1px solid var(--border);
+}
+.process-step:last-child{border-bottom:none}
+.process-num{
+  flex-shrink:0;width:26px;height:26px;
+  border-radius:50%;background:var(--accent);color:#fff;
+  font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.process-body{flex:1}
+.process-title{
+  font-size:15px;font-weight:700;color:var(--text);
+  margin-bottom:5px;
+}
+.process-desc{
+  font-size:13px;color:var(--text2);line-height:1.6;
+}
+.process-desc strong{color:var(--text);font-weight:600}
+.check-wrap{
+  background:var(--card);border-radius:var(--radius);
+  padding:6px 16px;border:1px solid var(--border);
+  box-shadow:var(--shadow);margin-bottom:12px;
+}
+.check-item{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:12px 0;border-bottom:1px solid var(--border);
+  font-size:14px;color:var(--text);line-height:1.5;
+}
+.check-item:last-child{border-bottom:none}
+.check-box{
+  flex-shrink:0;width:20px;height:20px;margin-top:1px;
+  border-radius:6px;border:2px solid var(--accent);
+  color:var(--accent);font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.note-block{margin-top:4px}
+.note-title{
+  font-size:14px;font-weight:700;color:var(--text);
+  margin:14px 0 6px;display:flex;align-items:center;
+}
+.note-title::before{
+  content:"";width:4px;height:14px;border-radius:2px;
+  background:var(--orange);margin-right:8px;
+}
+.note-list{list-style:none;margin:0;padding:0}
+.note-list li{
+  font-size:13px;color:var(--text2);line-height:1.7;
+  padding-left:18px;position:relative;margin-bottom:5px;
+}
+.note-list li::before{
+  content:"•";color:var(--orange);position:absolute;left:4px;font-weight:700;
+}
 .sheet-mask{
   position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:300;
   display:none;align-items:flex-end;justify-content:center;
@@ -361,9 +420,9 @@ D["major-change"]={t:"🔄 转专业政策",h:'<div class="tip"><strong>转专�
 D.zhuanben={t:"📈 专升本",h:'<h5>统招专升本（推荐，含金量最高）</h5><ul><li>面向应届专科毕业生（第三年）</li><li>考试科目：<strong>公共英语+专业课</strong></li><li>录取后进入本科院校两年全日制学习</li><li>获得普通高等教育本科毕业证和学士学位证</li><li>可报考：新乡医学院、河南科技大学等（根据每年政策调整）</li><li>报名时间：约 11 月份左右</li></ul><h5>成人高等教育专升本</h5><ul><li>成人高考专升本（每年10月）</li><li>自考专升本（无入学考试）</li><li>国家开放大学专升本</li></ul><div class="tip"><strong>南小医建议：</strong>大一就要开始准备英语，公共英语是必考科目！</div>'};
 
 D["freshman-group"]={t:"💬 新生QQ群",h:'<h5>为什么要加群</h5><ul><li><strong>报到前答疑：</strong>宿舍、专业、军训、转专业…群里直接问学长</li><li><strong>组队拼车：</strong>开学一起到校，分摊车费更划算</li><li><strong>二手闲置：</strong>转卖教材、自行车、收纳用品</li><li><strong>通知提醒：</strong>重要时间节点不错过</li></ul><h5>加群方式</h5><p>👉 <strong>保存下方二维码，用 QQ 扫一扫</strong>即可进群；若群满或二维码过期，直接在 QQ 搜索群号 <strong>1078584997</strong> 申请加入。</p><div class="qr-placeholder"><img src="group-qq.jpg" alt="南阳医专2026级新生QQ群二维码" style="max-width:240px;width:92%;height:auto;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);"><span>群号：1078584997</span></div><div class="tip warn"><strong>群规：</strong>禁止广告、刷屏、不良信息，违规移出。</div>'};
-D.items={t:"🎒 必带物品清单",h:'<h5>证件类（必带）</h5><ul><li>录取通知书</li><li>身份证及复印件</li><li>团员证及转团组织关系</li><li>学籍档案（<strong style="color:#ef4444">不可开封！</strong>）</li><li>户口本复印件</li><li>近期免冠照片</li></ul><h5>生活类</h5><ul><li>被褥（四季衣物，南阳春秋短，夏热冬冷）</li><li>洗漱用品、拖鞋</li><li>插排（必备，大功率禁用）</li></ul><h5>医药类</h5><ul><li>感冒药、肠胃药、创可贴、体温计</li></ul><div class="tip warn"><strong>不建议携带：</strong>大功率电器、宠物、贵重物品。</div>'};
+D.items={t:"🎒 必带物品清单",h:'<div class="check-wrap"><div class="check-item"><div class="check-box">✓</div><div>录取通知书（<strong style="color:#ef4444">务必携带！</strong>）</div></div><div class="check-item"><div class="check-box">✓</div><div>身份证原件及复印件</div></div><div class="check-item"><div class="check-box">✓</div><div>团员证及转团组织关系证明</div></div><div class="check-item"><div class="check-box">✓</div><div>学籍档案（<strong style="color:#ef4444">密封！不可拆封</strong>）</div></div><div class="check-item"><div class="check-box">✓</div><div>户口本复印件（户主页+本人页）</div></div><div class="check-item"><div class="check-box">✓</div><div>近期免冠照片（一寸、二寸各一版）</div></div><div class="check-item"><div class="check-box">✓</div><div>被褥、四季衣物（南阳春秋短，夏热冬冷）</div></div><div class="check-item"><div class="check-box">✓</div><div>洗漱用品、拖鞋、插排（必备，大功率禁用）</div></div><div class="check-item"><div class="check-box">✓</div><div>常备药：感冒药、肠胃药、创可贴、体温计</div></div></div><div class="note-block"><div class="note-title">特别提醒</div><ul class="note-list"><li>学籍档案需密封携带，<strong style="color:#ef4444">切勿自行拆封！</strong></li><li>部分专业需自带白大褂（入学后统一定制）。</li><li>军训期间准备防晒用品（SPF50+）及大容量水壶。</li><li>贫困生可申请"绿色通道"缓缴学费。</li><li>不建议携带：大功率电器、宠物、贵重物品。</li></ul></div>'};
 
-D.register={t:"🏫 报到流程",h:'<h5>报到时间</h5><p>以录取通知书上注明的时间为准。</p><h5>所需材料</h5><ul><li>录取通知书原件</li><li>身份证原件及复印件</li><li>学籍档案（密封状态）</li><li>团员证及转团材料</li><li>近期免冠照片</li></ul><h5>流程</h5><ol><li>查看迎新指示牌，找到系院报到点</li><li>提交材料，领取一卡通</li><li>领取宿舍钥匙，办理入住</li><li>熟悉校园环境</li><li>参加新生入学教育</li></ol><div class="tip danger"><strong>重要：</strong>学籍档案不可自行开封！</div>'};
+D.register={t:"🏫 报到流程",h:'<div class="process-wrap"><div class="process-step"><div class="process-num">1</div><div class="process-body"><div class="process-title">线上预报到</div><div class="process-desc">登录学校迎新系统，完善个人信息、上传照片、选择宿舍。<br><strong>时间：</strong>8月20日-9月5日。</div></div></div><div class="process-step"><div class="process-num">2</div><div class="process-body"><div class="process-title">到校报到</div><div class="process-desc">携带录取通知书、身份证等到校，在各系迎新点办理注册手续。<br><strong>时间：</strong>9月6日-7日。</div></div></div><div class="process-step"><div class="process-num">3</div><div class="process-body"><div class="process-title">缴费确认</div><div class="process-desc">学费、住宿费等可通过线上支付或到财务处缴纳，保存缴费凭证。</div></div></div><div class="process-step"><div class="process-num">4</div><div class="process-body"><div class="process-title">领取物资</div><div class="process-desc">领取校园卡、宿舍钥匙、军训服装等，办理入住手续。</div></div></div><div class="process-step"><div class="process-num">5</div><div class="process-body"><div class="process-title">入学体检</div><div class="process-desc">按学校安排进行入学体检，体检合格者方可注册学籍。</div></div></div><div class="process-step"><div class="process-num">6</div><div class="process-body"><div class="process-title">开学典礼</div><div class="process-desc">9月8日参加开学典礼及入学教育，正式开启大学生活。</div></div></div></div><div class="tip danger"><strong>重要提醒：</strong>学籍档案需密封携带，<strong style="color:#ef4444">切勿自行拆封！</strong></div>'};
 
 D.transport={t:"🚌 交通指南",h:'<h5>火车站 → 学校</h5><ul><li>公交1路：直达南阳医专站</li><li>公交K12路：到北京路雪枫路口（约7站）</li><li>公交3/10/12/18路：经过南阳卫校站</li><li>出租车：约15-20分钟</li></ul><h5>高铁站（南阳东站）→ 学校</h5><ul><li>高铁定制3号快线：到孔明校区</li><li>高铁定制2号快线：到火车站再换乘</li><li>出租车：约30-40分钟</li></ul><h5>汽车站 → 学校</h5><ul><li>公交1/3/10/12路</li><li>出租车：约15分钟</li></ul>'};
 
