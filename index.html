@@ -422,7 +422,7 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
 
   <div class="quick-grid">
     <div class="quick-item" onclick="showDetail('dorm')"><div class="qi-icon qi-blue">宿</div><div class="qi-label">宿舍条件</div></div>
-    <div class="quick-item" onclick="showDetail('canteen')"><div class="qi-icon qi-orange">食</div><div class="qi-label">食堂</div></div>
+    <div class="quick-item" onclick="showDetail('food')"><div class="qi-icon qi-orange">食</div><div class="qi-label">校园美食</div></div>
     <div class="quick-item" onclick="showDetail('major-change')"><div class="qi-icon qi-green">转</div><div class="qi-label">转专业</div></div>
     <div class="quick-item" onclick="showDetail('zhuanben')"><div class="qi-icon qi-purple">本</div><div class="qi-label">专升本</div></div>
     <div class="quick-item" onclick="showDetail('freshman-group')"><div class="qi-icon qi-blue">群</div><div class="qi-label">新生群</div></div>
@@ -433,7 +433,6 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
 
   <div class="sec-title">新生最关注</div>
   <div class="card" onclick="showDetail('dorm')"><div class="card-content"><h4>🏠 宿舍条件怎么样？</h4><p>六人间，有独卫有阳台，有空调有风扇有热水…</p></div><span class="arrow">›</span></div>
-  <div class="card" onclick="showDetail('canteen')"><div class="card-content"><h4>🍜 食堂怎么样？</h4><p>三校区共6个餐厅，便宜又好吃…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('major-change')"><div class="card-content"><h4>🔄 转专业政策</h4><p>大一可申请，笔试+面试，9月和春季各一次…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('zhuanben')"><div class="card-content"><h4>📈 专升本</h4><p>统招专升本含金量最高，可报新乡医学院等…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('freshman-group')"><div class="card-content"><h4>💬 新生群</h4><p>加群答疑、组队拼车、二手闲置…</p></div><span class="arrow">›</span></div>
@@ -458,12 +457,14 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
   <div class="card" onclick="showDetail('express')"><div class="card-content"><h4>📦 快递</h4><p>校内菜鸟驿站，快递地址填写</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('clinic')"><div class="card-content"><h4>💊 校医院</h4><p>校内医务室 + 三所附属医院</p></div><span class="arrow">›</span></div>
 
+  <div class="sec-title">🍜 校园美食</div>
+  <div class="card" onclick="showDetail('food')"><div class="card-content"><h4>🍜 校园美食</h4><p>校内食堂 + 周边小吃街 + 南阳特产，一次看全</p></div><span class="arrow">›</span></div>
+
   <div class="sec-title">社团活动</div>
   <div class="card" onclick="showDetail('clubs')"><div class="card-content"><h4>🏅 社团列表</h4><p>40个社团，开学百团大战任你选</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('activity')"><div class="card-content"><h4>🎉 校园活动</h4><p>仲景文化艺术节、校运动会、音乐节…</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">周边生活</div>
-  <div class="card" onclick="showDetail('eat')"><div class="card-content"><h4>🍢 周边美食</h4><p>油泼面、黄焖鸡、方城烩面…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('scenic')"><div class="card-content"><h4>🏯 南阳景点</h4><p>武侯祠、白河湿地、老界岭…学生证半价</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">答疑解惑</div>
@@ -555,6 +556,8 @@ D.activity={t:"🎉 校园活动",h:'<ul><li>仲景文化艺术节</li><li>艺�
 
 D.eat={t:"🍢 周边美食",h:'<h5>校园周边小吃街</h5><p class="spot-sum">📍 推荐地点：十二里河小吃街、经纬国际广场、府衙小吃街、U形街</p><ul class="compact-list"><li><strong>油泼面</strong> — 陕西人正宗制作。</li><li><strong>黄焖鸡米饭</strong> — 米饭 2 元无限续。</li><li><strong>麻辣烫</strong> — 人均约 13 元。</li><li><strong>炸鸡、烧烤</strong> — 夜宵首选。</li></ul><h5>南阳特色美食 &amp; 特产</h5><ul class="compact-list"><li><strong>方城烩面</strong> — 南阳代表性面食，羊汤醇厚。</li><li><strong>新野板面</strong> — 面筋劲道，香辣入味。</li><li><strong>南阳黄牛</strong> — 本地特产，牛肉鲜香。</li><li><strong>镇平烧鸡</strong> — 肉质酥烂，咸香入味。</li><li><strong>郭滩烧鸡</strong> — 南阳传统风味熟食。</li><li><strong>浆面条</strong> — 南阳经典家常小吃。</li><li><strong>蒸菜</strong> — 本地特色，清淡爽口。</li><li><strong>西峡仲景香菇酱</strong> — 南阳知名特产，拌饭神器。</li><li><strong>三色鸽乳品糕点</strong> — 南阳本土老牌，牛奶、面包、点心。</li><li><strong>桐柏豆筋</strong> — 特色豆制品，凉拌、红烧都合适。</li><li><strong>唐河凉粉</strong> — 清爽开胃，夏季小吃。</li><li><strong>淅川酸菜</strong> — 本地特色腌菜。</li><li><strong>内乡卷煎</strong> — 传统特色小吃。</li></ul><table><tr><th>类型</th><th>人均</th></tr><tr><td>小吃街</td><td>10-20元</td></tr><tr><td>小餐馆</td><td>30-50元</td></tr></table><div class="tip"><strong>新生小提示：</strong>三色鸽门店市区随处可见，适合日常买早餐；仲景香菇酱很适合买了当伴手礼带给家人。</div>'};
 
+D.food={t:"🍜 校园美食",h:'<div class="tip"><strong>校内外怎么吃？</strong>校内三校区6个餐厅、校外小吃街、南阳特产，一张嘴带你逛遍。</div>'+D.canteen.h+'<div style="height:1px;background:var(--border);margin:18px 0"></div>'+D.eat.h};
+
 D.scenic={t:"🏯 南阳景点",h:'<p class="spot-sum">📍 推荐地点：卧龙岗武侯祠、白河湿地公园、独山森林公园、医圣文化园</p><h5>校园周边半日打卡地</h5><ul class="compact-list"><li><strong>卧龙岗武侯祠</strong> — 诸葛亮躬耕地，学生票半价，拍照出片。</li><li><strong>白河湿地公园</strong> <span class="spot-free">免费</span> — 免费打卡，淯阳桥日落、骑行散步。</li><li><strong>独山森林公园</strong> — 短途爬山，登顶俯瞰全城。</li><li><strong>医圣文化园</strong> — 纪念张仲景，医学生特色打卡点。</li></ul><h5>南阳近郊 &amp; 小长假景点</h5><ul class="compact-list"><li><strong>南阳府衙</strong> — 古衙门遗址，周边美食云集。</li><li><strong>赊店古镇</strong> — 明清古建筑，山陕会馆极具特色。</li><li><strong>西峡老界岭</strong> — 天然氧吧，避暑好去处。</li><li><strong>西峡恐龙遗迹园</strong> — 恐龙化石科普景区。</li><li><strong>淅川丹江大观苑</strong> — 南水北调源头，湖景观光。</li></ul><div class="tip"><strong>南小医说：</strong>凭学生证，大多数景区可半价或免费游览！</div>'};
 
 D.scholarship={t:"🎓 奖励资助",h:'<h5>资助体系</h5><p>学校高度重视学生资助工作，本着<strong>“一切为了学生、为了学生一切”</strong>的办学理念，以<strong>“不让一名学生因家庭经济困难而辍学”</strong>为目标，全方位建立起<strong>“奖、助、贷、免、补、勤”</strong>等多措并举、相互补充的学生资助体系。</p><h5>资助项目</h5><ul class="compact-list"><li><strong>国家奖学金</strong> — 10000 元/生/年</li><li><strong>国家励志奖学金</strong> — 6000 元/生/年</li><li><strong>国家助学金</strong> — 分三档：4400 元、3700 元、3000 元/生/年</li><li><strong>退役士兵国家助学金</strong> — 3700 元/生/年</li><li><strong>助学贷款</strong> — 家庭经济困难学生可申请高校国家助学贷款，也可在入学前到生源地学生资助中心申请生源地信用助学贷款，每生每年最高 20000 元</li><li><strong>学校优秀学生奖学金</strong> — 分三档：1000 元、600 元、400 元/生/年</li><li><strong>捐赠奖（助）学金、勤工助学、临时困难救助等</strong></li></ul><h5>家庭经济困难新生</h5><p>被我校录取的家庭经济困难新生，如暂时筹集不齐学费和住宿费，报到时可通过<strong>“绿色通道”</strong>先办理入学手续，暂缓缴费。入学后根据学生具体情况开展困难认定，采取不同措施给予资助。</p><p>对应征入伍服义务兵役、招收为士官的学生进行学费补偿或对国家助学贷款中用于学费的部分实行代偿；服役期间按国家有关规定保留学籍或入学资格，退役后入学（自主就业）或复学的学生，实行学费减免。</p><div class="tip warn"><strong>南小医提醒：</strong>具体金额、申请条件与流程以学校学生资助管理中心当年通知为准。</div><h5>官方文件</h5><div class="link-grid"><a class="link-card" href="https://gjjy.nymc.edu.cn/info/1049/2009.htm" target="_blank"><div class="lc-title">📄 奖助学金评定、发放办法</div><div class="lc-desc">南阳医专学生资助政策原文</div></a></div>'};
@@ -596,7 +599,6 @@ function scrollToContact(){
 // 二维码目录数据
 var TOC=[
   {i:"🏠",t:"宿舍条件",k:"dorm"},
-  {i:"🍜",t:"食堂",k:"canteen"},
   {i:"🔄",t:"转专业",k:"major-change"},
   {i:"📈",t:"专升本",k:"zhuanben"},
   {i:"💬",t:"新生群",k:"freshman-group"},
@@ -613,8 +615,8 @@ var TOC=[
   {i:"💊",t:"校医院",k:"clinic"},
   {i:"🏅",t:"社团列表",k:"clubs"},
   {i:"🎉",t:"校园活动",k:"activity"},
-  {i:"🍢",t:"周边美食",k:"eat"},
   {i:"🏯",t:"南阳景点",k:"scenic"},
+  {i:"🍜",t:"校园美食",k:"food"},
   {i:"📷",t:"校园实拍",k:"campus"},
   {i:"💬",t:"常见问题",k:"faq"},
   {i:"⚠",t:"防诈骗",k:"fraud"},
