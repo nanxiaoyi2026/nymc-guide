@@ -393,6 +393,14 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
 .tel-item{display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:10px 14px}
 .tel-name{font-size:12px;color:var(--text2)}
 .tel-num{font-size:17px;font-weight:700;color:var(--accent);text-decoration:none}
+.photo-section{margin:18px 0 4px}
+.photo-section h4{font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.photo-card{display:block;text-decoration:none;background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.photo-card img{width:100%;height:132px;object-fit:cover;display:block;background:var(--bg2)}
+.photo-cap{font-size:12px;color:var(--text2);padding:8px 10px;line-height:1.4}
+.photo-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:150px;border:2px dashed var(--border);border-radius:14px;color:var(--muted);font-size:13px;text-align:center;padding:12px;line-height:1.5}
+.photo-ph .ph-ico{font-size:30px}
 </style>
 </head>
 <body>
@@ -442,6 +450,9 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
   <div class="card" onclick="showDetail('major-list')"><div class="card-content"><h4>📖 全部专业一览</h4><p>26个专业详细介绍 · 培养目标/主干课程/就业方向/学费</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('plan')"><div class="card-content"><h4>📊 2026河南招生计划</h4><p>河南分专业计划、学费、招生人数</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('plan-out')"><div class="card-content"><h4>📊 2026外省招生计划</h4><p>国标代码13781，外省招生专业、学费</p></div><span class="arrow">›</span></div>
+
+  <div class="sec-title">📷 校园实拍</div>
+  <div class="card" onclick="showDetail('campus')"><div class="card-content"><h4>📷 校园实拍</h4><p>校门、校园环境、宿舍、全景 AR…</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">生活服务</div>
   <div class="card" onclick="showDetail('express')"><div class="card-content"><h4>📦 快递</h4><p>校内菜鸟驿站，快递地址填写</p></div><span class="arrow">›</span></div>
@@ -513,7 +524,7 @@ try{
 // 详情数据 - 所有内容都在这里
 var D={};
 
-D.dorm={t:"🏠 宿舍条件",h:'<h5>宿舍类型</h5><p><strong>六人间</strong>，上铺四人、下铺两人，公寓化管理。</p><h5>设施配置</h5><table><tr><th>项目</th><th>详情</th></tr><tr><td>卫生间</td><td>独立卫浴有阳台</td></tr><tr><td>淋浴</td><td>有（<strong>热水</strong>）</td></tr><tr><td>空调</td><td><strong>有空调、有风扇</strong></td></tr><tr><td>床尺寸</td><td>标准 0.9m×2m（宽约 90cm，长约 2m）</td></tr><tr><td>用电功率</td><td>最大 600W</td></tr><tr><td>网络</td><td>宿舍楼校园网覆盖 Wi-Fi</td></tr><tr><td>储物</td><td>每人衣柜、椅子、书桌</td></tr><tr><td>洗衣</td><td>每栋楼自助洗衣房</td></tr></table><h5>住宿费</h5><table><tr><th>校区</th><th>费用</th></tr><tr><td>仲景西区</td><td><strong>700元/年</strong></td></tr><tr><td>仲景东区</td><td><strong>700元/年</strong></td></tr><tr><td>孔明校区</td><td><strong>700元/年</strong></td></tr></table><div class="tip"><strong>南小医说：</strong>宿舍有空调有风扇、热水淋浴、校园网 Wi-Fi，用电最大功率 600W，整体还是很舒服的！</div>'};
+D.dorm={t:"🏠 宿舍条件",h:'<h5>宿舍类型</h5><p><strong>六人间</strong>，上铺四人、下铺两人，公寓化管理。</p><h5>设施配置</h5><table><tr><th>项目</th><th>详情</th></tr><tr><td>卫生间</td><td>独立卫浴有阳台</td></tr><tr><td>淋浴</td><td>有（<strong>热水</strong>）</td></tr><tr><td>空调</td><td><strong>有空调、有风扇</strong></td></tr><tr><td>床尺寸</td><td>标准 0.9m×2m（宽约 90cm，长约 2m）</td></tr><tr><td>用电功率</td><td>最大 600W</td></tr><tr><td>网络</td><td>宿舍楼校园网覆盖 Wi-Fi</td></tr><tr><td>储物</td><td>每人衣柜、椅子、书桌</td></tr><tr><td>洗衣</td><td>每栋楼自助洗衣房</td></tr></table><h5>住宿费</h5><table><tr><th>校区</th><th>费用</th></tr><tr><td>仲景西区</td><td><strong>700元/年</strong></td></tr><tr><td>仲景东区</td><td><strong>700元/年</strong></td></tr><tr><td>孔明校区</td><td><strong>700元/年</strong></td></tr></table><div class="tip"><strong>南小医说：</strong>宿舍有空调有风扇、热水淋浴、校园网 Wi-Fi，用电最大功率 600W，整体还是很舒服的！</div><div class="tip"><strong>📷 宿舍实拍：</strong> <a href="javascript:showDetail(\'campus\')" style="color:var(--accent)">点此查看校园实拍相册 →</a></div>'};
 
 D.canteen={t:"🍜 食堂",h:'<h5>食堂分布（共 6 个餐厅）</h5><table><tr><th>校区</th><th>餐厅数量</th></tr><tr><td>仲景西区</td><td>4 个餐厅</td></tr><tr><td>仲景东区</td><td>1 个餐厅</td></tr><tr><td>孔明校区</td><td>1 个餐厅</td></tr></table><h5>仲景西区（4 个餐厅）</h5><ul><li>音乐食堂：环境好，价格偏贵，推荐鱼粉</li><li>大食堂（两层）：价格便宜，一楼浆面条、二楼老碗面</li><li>清真食堂：为少数民族同学服务</li><li>另有风味档口餐厅，合计 4 个</li></ul><h5>仲景东区 / 孔明校区</h5><ul><li>仲景东区：1 个餐厅，就近就餐方便</li><li>孔明校区：1 个餐厅，中专部同学常用</li></ul><h5>校外选择</h5><ul><li>周边小吃街（十二里河小吃街、经纬国际广场、府衙小吃街、U形街）：油泼面、黄焖鸡米饭（米饭2元无限续）、麻辣烫（人均约13元）</li></ul><div class="tip"><strong>南小医说：</strong>开学前两周多尝几家，找到自己的最爱！</div>'};
 
@@ -557,6 +568,8 @@ D.services={t:"📞 常用服务 / 重要联系",h:'<h5>学校官方平台（点
 D.faq={t:"💬 常见问题",h:'<h5>Q：宿舍有空调吗？</h5><p><strong>有空调！也有风扇！</strong>夏天不怕热。</p><h5>Q：宿舍用电功率有限制吗？</h5><p><strong>有。</strong>宿舍限电最大 600W，不要使用大功率电器（如电锅、热得快、电暖器等），否则容易跳闸。</p><h5>Q：宿舍有热水吗？</h5><p><strong>淋浴有热水。</strong>每层还有开水器/直饮水机，打水方便。</p><h5>Q：可以带电脑吗？</h5><p>可以。部分专业需要电脑完成作业。</p><h5>Q：可以转专业吗？</h5><p>可以，大一可申请，需通过笔试+面试。</p><h5>Q：可以专升本吗？</h5><p>可以，大三参加统招专升本考试。</p><h5>Q：学校允许外卖吗？</h5><p>可以点外卖，到校门口取。</p>'};
 
 D.fraud={t:"⚠ 防诈骗",h:'<h5>常见校园诈骗</h5><ul><li>刷单兼职 — 先垫付后返款，必被骗</li><li>冒充客服 — "您的快递有问题…"</li><li>冒充学长学姐 — 推销学习卡</li><li>兼职押金 — 收钱后跑路</li><li>校园贷 — 低息诱惑，实为高利贷</li></ul><h5>防骗原则</h5><ul><li>不轻信：陌生来电、短信、链接</li><li>不透露：身份证号、银行卡、验证码</li><li>不转账：陌生账户不转账</li><li>必核实：可疑信息先核实</li></ul><div class="tip danger"><strong>南小医提醒：</strong>天上不会掉馅饼，馅饼下面是陷阱！遇到可疑情况立即拨打110。</div>'};
+
+D.campus={t:"📷 校园实拍",h:'<h5>校园实拍相册</h5><div class="tip">实拍带你“云逛校园”：校门、校园环境、宿舍、全景 AR 都在这里。</div><div class="photo-section"><h4>🌳 校园环境</h4><div class="photo-grid"><a class="photo-card" href="img/campus-gate.jpg"><img src="img/campus-gate.jpg" alt="南阳医专校门"><div class="photo-cap">校门 · 雪枫西路1106号</div></a><a class="photo-card" href="img/campus-white-arch.jpg"><img src="img/campus-white-arch.jpg" alt="校园白拱门"><div class="photo-cap">校园拱门</div></a><a class="photo-card" href="img/campus-aerial.jpg"><img src="img/campus-aerial.jpg" alt="校园航拍"><div class="photo-cap">校园航拍</div></a></div></div><div class="photo-section"><h4>🏠 宿舍实拍</h4><div class="photo-ph"><span class="ph-ico">📷</span>宿舍照片收集中～把照片发我就上线</div></div><div class="photo-section"><h4>🌐 校园全景 / AR</h4><div class="photo-ph"><span class="ph-ico">🧭</span>校园全景 / AR 待补充<br>发我全景图，或 AR 链接 / 二维码即可嵌入<br>（可做可拖拽 360° 全景，或外链按钮）</div></div>'};
 
 // 显示详情
 function showDetail(key){
@@ -602,6 +615,7 @@ var TOC=[
   {i:"🎉",t:"校园活动",k:"activity"},
   {i:"🍢",t:"周边美食",k:"eat"},
   {i:"🏯",t:"南阳景点",k:"scenic"},
+  {i:"📷",t:"校园实拍",k:"campus"},
   {i:"💬",t:"常见问题",k:"faq"},
   {i:"⚠",t:"防诈骗",k:"fraud"},
   {i:"📞",t:"常用服务 / 重要联系",k:"services"}
