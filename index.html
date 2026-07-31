@@ -407,8 +407,8 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
 .photo-card img{width:100%;height:132px;object-fit:cover;display:block;background:var(--bg2)}
 .photo-cap{font-size:12px;color:var(--text2);padding:8px 10px;line-height:1.4}
 .photo-section.dorm .photo-card img{height:200px}
-.photo-section.map .photo-grid{grid-template-columns:1fr}
-.photo-section.map .photo-card img{height:auto}
+.photo-section.map .photo-grid{grid-template-columns:1fr 1fr}
+.photo-section.map .photo-card img{height:200px;object-fit:contain}
 .pano-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:var(--bg2)}
 .pano-iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .pano-link{display:inline-block;margin-top:10px;color:var(--accent);font-size:13px;text-decoration:none}
@@ -439,17 +439,17 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
     <div class="quick-item" onclick="showDetail('food')"><div class="qi-icon qi-orange">食</div><div class="qi-label">校园美食</div></div>
     <div class="quick-item" onclick="showDetail('major-change')"><div class="qi-icon qi-green">转</div><div class="qi-label">转专业</div></div>
     <div class="quick-item" onclick="showDetail('zhuanben')"><div class="qi-icon qi-purple">本</div><div class="qi-label">专升本</div></div>
-    <div class="quick-item" onclick="showDetail('freshman-group')"><div class="qi-icon qi-blue">群</div><div class="qi-label">新生群</div></div>
+    <div class="quick-item" onclick="showDetail('freshman-group')"><div class="qi-icon qi-blue">群</div><div class="qi-label">新生必进</div></div>
     <div class="quick-item" onclick="showDetail('items')"><div class="qi-icon qi-cyan">物</div><div class="qi-label">必带清单</div></div>
     <div class="quick-item" onclick="showDetail('transport')"><div class="qi-icon qi-teal">车</div><div class="qi-label">交通</div></div>
-    <div class="quick-item" onclick="scrollToContact()"><div class="qi-icon qi-pink">联</div><div class="qi-label">联系我</div></div>
+    <div class="quick-item" onclick="scrollToContact()"><div class="qi-icon qi-pink">联</div><div class="qi-label">联系学长</div></div>
   </div>
 
   <div class="sec-title">新生最关注</div>
   <div class="card" onclick="showDetail('dorm')"><div class="card-content"><h4>🏠 宿舍条件怎么样？</h4><p>六人间，有独卫有阳台，有空调有风扇有热水…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('major-change')"><div class="card-content"><h4>🔄 转专业政策</h4><p>大一可申请，笔试+面试，9月和春季各一次…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('zhuanben')"><div class="card-content"><h4>📈 专升本</h4><p>统招专升本含金量最高，可报新乡医学院等…</p></div><span class="arrow">›</span></div>
-  <div class="card" onclick="showDetail('freshman-group')"><div class="card-content"><h4>💬 新生群</h4><p>加群答疑、组队拼车、二手闲置…</p></div><span class="arrow">›</span></div>
+  <div class="card" onclick="showDetail('freshman-group')"><div class="card-content"><h4>💬 新生必进</h4><p>加群答疑、组队拼车、二手闲置…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('scholarship')"><div class="card-content"><h4>🎓 奖学金 / 资助</h4><p>国家奖学金、助学金、助学贷款、绿色通道…</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">入学准备</div>
@@ -613,7 +613,7 @@ var TOC=[
   {i:"🏠",t:"宿舍条件",k:"dorm"},
   {i:"🔄",t:"转专业",k:"major-change"},
   {i:"📈",t:"专升本",k:"zhuanben"},
-  {i:"💬",t:"新生群",k:"freshman-group"},
+  {i:"💬",t:"新生必进",k:"freshman-group"},
   {i:"🎓",t:"奖学金 / 资助",k:"scholarship"},
   {i:"🎒",t:"必带清单",k:"items"},
   {i:"🏫",t:"报到流程",k:"register"},
