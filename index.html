@@ -459,7 +459,6 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
 
   <div class="sec-title">生活服务</div>
   <div class="card" onclick="showDetail('express')"><div class="card-content"><h4>📦 快递</h4><p>校内菜鸟驿站，快递地址填写</p></div><span class="arrow">›</span></div>
-  <div class="card" onclick="showDetail('clinic')"><div class="card-content"><h4>💊 校医院</h4><p>校内医务室 + 三所附属医院</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">🍜 校园美食</div>
   <div class="card" onclick="showDetail('food')"><div class="card-content"><h4>🍜 校园美食</h4><p>校内食堂 + 周边小吃街 + 南阳特产，一次看全</p></div><span class="arrow">›</span></div>
@@ -482,10 +481,6 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
     <div class="qr-row" id="qrRow">
       <div style="text-align:center;color:#fff;font-size:13px;padding:20px;">二维码加载中…</div>
     </div>
-    <div class="qr-row" style="margin-top:6px">
-      <div class="qr-box"><img src="img/qr-guide.png" alt="南小医新生指南二维码"></div>
-    </div>
-    <div style="text-align:center;color:#fff;font-size:12px;margin-top:6px">📲 扫码直接打开《南小医新生指南》</div>
   </div>
 
   <div class="footer">
@@ -555,7 +550,6 @@ D["major-list"]={t:"📖 全部专业一览",h:'<p>南阳医专共开设 <strong
 
 D.express={t:"📦 快递收货",h:'<div class="tip warn"><strong>⚠️ 温馨提示：</strong>邮寄行李务必写清校区！三个校区距离较远，填错校区需跨校区取件。</div><h5>孔明校区（老校区）</h5><ul><li>收货地址：河南省南阳市卧龙区卧龙路131号 南阳医学高等专科学校（孔明校区）</li><li>快递点：16号宿舍楼院内菜鸟驿站</li><li>顺丰、邮政在校门口点位领取</li></ul><h5>仲景东区</h5><ul><li>收货地址：河南省南阳市卧龙区卧龙岗街道北京南路300号 南阳医学高等专科学校（仲景东区）</li><li>快递点：宿舍楼楼下菜鸟驿站</li></ul><h5>仲景西区</h5><ul><li>收货地址：河南省南阳市卧龙区雪枫西路1106号 南阳医学高等专科学校（仲景西区）</li><li>快递点：校园商业街菜鸟驿站</li></ul><h5>新生取件小提示</h5><ol><li>开学大件行李，地址完整填写：校区+姓名+手机号</li><li>京东、顺丰、邮政大多不进入菜鸟驿站，留意短信通知</li><li>孔明校区≠仲景东西校区，不要混淆！</li></ol>'};
 
-D.clinic={t:"💊 校医院",h:'<h5>校内医疗</h5><p>学校设有<strong>校医务室</strong>，为师生提供基本医疗服务。</p><h5>附属医院</h5><table><tr><th>医院</th><th>等级</th><th>特色</th></tr><tr><td>第一附属医院</td><td>三甲</td><td>综合性医院</td></tr><tr><td>第二附属医院</td><td>三甲</td><td>中医特色</td></tr><tr><td>第三附属医院</td><td>二级</td><td>眼科、微创</td></tr></table><h5>医疗保障</h5><ul><li>新生入学后办理大学生医保</li><li>日常小病在医务室就诊</li><li>专科治疗可前往附属医院</li><li>建议自备常用药品</li></ul>'};
 
 D.clubs={t:"🏅 社团列表",h:'<p>学校有注册社团<strong>40个</strong>左右，涵盖思想政治、学术科技、文化体育、志愿服务、创新创业等，开学第一周"百团大战"任你选。</p><ul class="compact-list"><li><strong>青创社</strong></li><li><strong>篮球社</strong></li><li><strong>舞蹈社</strong></li><li><strong>羽毛球社</strong></li><li><strong>武术社</strong></li><li><strong>街舞社</strong></li><li><strong>二次元社</strong></li><li><strong>国旗护卫队</strong></li></ul><div class="tip"><strong>南小医说：</strong>开学第一周是社团百团大战，多逛逛找到自己感兴趣的！</div>'};
 
@@ -620,7 +614,6 @@ var TOC=[
   {i:"📊",t:"2026河南招生计划",k:"plan"},
   {i:"📊",t:"2026外省招生计划",k:"plan-out"},
   {i:"📦",t:"快递",k:"express"},
-  {i:"💊",t:"校医院",k:"clinic"},
   {i:"🏅",t:"社团列表",k:"clubs"},
   {i:"🎉",t:"校园活动",k:"activity"},
   {i:"🏯",t:"南阳景点",k:"scenic"},
