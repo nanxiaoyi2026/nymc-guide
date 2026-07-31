@@ -48,6 +48,13 @@ body{
 html[data-theme="dark"] .navbar{background:rgba(15,23,42,.95)}
 .navbar-title{font-size:16px;font-weight:600;flex:1;color:var(--text)}
 .navbar-title small{font-size:10px;color:var(--muted);font-weight:400;margin-left:6px}
+.navbar-emblem{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;flex:0 0 auto;background:#fff;
+  border:1px solid var(--border);border-radius:8px;padding:3px;
+  box-shadow:0 1px 2px rgba(0,0,0,.12);margin-right:8px;
+}
+.navbar-emblem img{width:100%;height:100%;object-fit:contain;display:block}
 .navbar-btn{
   width:32px;height:32px;border:none;background:none;
   font-size:18px;color:var(--text2);cursor:pointer;
@@ -412,6 +419,7 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
 <body>
 
 <div class="navbar">
+  <span class="navbar-emblem"><img src="img/emblem.png" alt="南阳医专校徽"></span>
   <div class="navbar-title">南小医<small>南阳医专新生指南</small></div>
   <button class="navbar-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
   <button class="navbar-btn" onclick="toggleDrawer()">☰</button>
@@ -419,9 +427,8 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
 
 <div class="content">
 
-  <div class="hero">
-    <span class="hero-icon">🏥</span>
-    <h1>你好，我是南小医</h1>
+      <div class="hero">
+        <h1>你好，我是南小医</h1>
     <p>南阳医专学长 · 带你了解学校的一切</p>
   </div>
 
