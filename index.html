@@ -497,6 +497,9 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
   <div class="card" onclick="showDetail('plan')"><div class="card-content"><h4>📊 2026河南招生计划</h4><p>河南分专业计划、学费、招生人数</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('plan-out')"><div class="card-content"><h4>📊 2026外省招生计划</h4><p>国标代码13781，外省招生专业、学费</p></div><span class="arrow">›</span></div>
 
+  <div class="sec-title">📅 校历·时间表</div>
+  <div class="card" onclick="showDetail('calendar')"><div class="card-content"><h4>📅 校历·时间表</h4><p>2026-2027学年校历、上课时间表</p></div><span class="arrow">›</span></div>
+
   <div class="sec-title">📷 校园实拍</div>
   <div class="card" onclick="showDetail('campus')"><div class="card-content"><h4>📷 校园实拍</h4><p>校门、校园环境、宿舍、全景 AR…</p></div><span class="arrow">›</span></div>
 
@@ -658,6 +661,14 @@ D.campusCard={t:"📶 校园卡（含校园网权益）",h:
 +'<div class="cc-note">办理前请向学长确认当前活动；本页信息仅供参考，不构成任何强制或商业承诺。</div>'
 };
 
+D.calendar={t:"📅 校历·时间表",h:
+'<div class="tip"><strong>以下校历和上课时间表来自学校官方 2026-2027 学年安排。</strong>具体放假、调课以学校办公室最新通知为准。</div>'
++'<h5>🗓 2026-2027 学年校历</h5>'
++'<div class="cc-poster"><img src="img/calendar-2026-2027.png" alt="2026-2027学年校历"><div class="cc-cap">2026年秋期 + 2027年春期 · 开学、放假、军训、考试等重要节点</div></div>'
++'<h5>⏰ 上课时间表</h5>'
++'<div class="cc-poster"><img src="img/timetable.jpg" alt="上课时间表"><div class="cc-cap">夏季/冬季作息、上午/下午/晚上课程安排</div></div>'
+};
+
 // 显示详情
 function showDetail(key){
   var d=D[key];
@@ -726,6 +737,7 @@ var TOC=[
   {i:"🏫",t:"学校简介 / 常用服务",k:"overview"},
   {i:"📖",t:"全部专业一览",k:"major-list"},
   {i:"🏫",t:"专业·校区·宿舍",k:"campusMajor"},
+  {i:"📅",t:"校历·时间表",k:"calendar"},
   {i:"📊",t:"2026河南招生计划",k:"plan"},
   {i:"📊",t:"2026外省招生计划",k:"plan-out"},
   {i:"📦",t:"快递",k:"express"},
