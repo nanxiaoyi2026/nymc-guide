@@ -224,6 +224,32 @@ html[data-theme="dark"] .navbar{background:rgba(15,23,42,.95)}
   color:var(--accent);font-weight:700;font-size:13px;
 }
 .compact-list strong{color:var(--text);font-weight:600}
+/* 校园卡详情 视觉优化 */
+.cc-banner{
+  display:flex;align-items:center;gap:14px;
+  background:linear-gradient(135deg,#3b82f6,#60a5fa);
+  border-radius:var(--radius-l);padding:16px 18px;margin:0 0 12px;
+  color:#fff;box-shadow:var(--shadow-md);
+}
+.cc-bicon{font-size:34px;line-height:1;flex:0 0 auto}
+.cc-btitle{font-size:16px;font-weight:700;margin-bottom:2px}
+.cc-bsub{font-size:12px;opacity:.92;line-height:1.4}
+.cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 4px}
+.cc-feat{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:12px}
+.cc-feat .cf-ico{font-size:20px;margin-bottom:4px;display:block}
+.cc-feat .cf-t{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+.cc-feat .cf-d{font-size:11px;color:var(--text2);line-height:1.45}
+.cc-reasons{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:4px 12px;margin:8px 0}
+.cc-reason{display:flex;gap:8px;font-size:13px;color:var(--text2);line-height:1.5;padding:8px 0;border-bottom:1px dashed var(--border)}
+.cc-reason:last-child{border-bottom:none}
+.cc-reason span{flex:1}
+.cc-contact{background:var(--accent-light);border:1px solid var(--accent);border-radius:12px;padding:12px 14px;margin:10px 0}
+.cc-ctitle{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:3px}
+.cc-cdesc{font-size:12px;color:var(--text2);line-height:1.5}
+.cc-poster{margin:12px 0 2px;text-align:center}
+.cc-poster img{width:100%;max-width:300px;border-radius:14px;box-shadow:var(--shadow-md);display:inline-block}
+.cc-cap{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.5}
+.cc-note{font-size:11px;color:var(--muted);line-height:1.6;margin:8px 4px 0}
 .spot-free{display:inline-block}
 .route-list{list-style:none;margin:0;padding:0}
 .route-list li{
@@ -612,7 +638,25 @@ D.luqu={t:"🔍 录取通知查询",h:'<div class="tip"><strong>录取结果分�
 
 D.campusMajor={t:"🏫 专业·校区·宿舍分布",h:'<div class="tip"><strong>查到录取后第一件事：看专业在哪个校区、住哪栋宿舍！</strong>下表为 2026 级新生院系 / 专业对应的校区与宿舍（数据以学校最新安排为准）。</div>'+'<table><tr><th>院系</th><th>专业</th><th>所在校区</th><th>女生宿舍</th><th>男生宿舍</th></tr>'+'<tr><td>临床系</td><td>临床医学</td><td>仲景西区</td><td>西区1公寓</td><td>西区2公寓</td></tr><tr><td>口腔系</td><td>口腔医学</td><td>仲景西区</td><td>西区1公寓</td><td>西区2公寓</td></tr><tr><td>中医系</td><td>中医学</td><td>仲景东区</td><td>东区1公寓</td><td>东区2公寓</td></tr><tr><td>针骨系</td><td>中医骨伤</td><td>仲景东区</td><td>东区1公寓</td><td>东区2公寓</td></tr><tr><td>针骨系</td><td>针灸推拿</td><td>仲景东区</td><td>东区1公寓</td><td>东区2公寓</td></tr><tr><td>体育保健系</td><td>体育保健与康复</td><td>仲景西区</td><td>西区7公寓</td><td>西区8公寓</td></tr><tr><td>护理系</td><td>护理</td><td>仲景西区</td><td>西区3公寓</td><td>西区4公寓</td></tr><tr><td>护理系</td><td>助产</td><td>仲景西区</td><td>西区3公寓</td><td>西区4公寓</td></tr><tr><td>药学系</td><td>药学</td><td>仲景东区</td><td>东区3公寓</td><td>东区4公寓</td></tr><tr><td>药学系</td><td>中药学</td><td>仲景东区</td><td>东区3公寓</td><td>东区4公寓</td></tr><tr><td>医技系</td><td>医学检验技术</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>医技系</td><td>医学影像技术</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>医技系</td><td>眼视光技术</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>医技系</td><td>康复治疗技术</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>卫管系</td><td>计算机网络技术</td><td>孔明校区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>卫管系</td><td>卫生信息管理</td><td>孔明校区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>健康管理系</td><td>健康管理</td><td>孔明校区</td><td>孔明校区1公寓</td><td>孔明校区2公寓</td></tr><tr><td>中医系</td><td>中医养生保健</td><td>仲景东区</td><td>东区1公寓</td><td>东区2公寓</td></tr><tr><td>医技系</td><td>医学美容技术</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>康复系</td><td>中医康复技术</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>健康管理系</td><td>健康大数据管理与服务</td><td>孔明校区</td><td>孔明校区1公寓</td><td>孔明校区2公寓</td></tr><tr><td>医技系</td><td>智能医疗装备技术</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>药学系</td><td>中药制药与加工技术</td><td>仲景东区</td><td>东区3公寓</td><td>东区4公寓</td></tr><tr><td>口腔系</td><td>口腔卫生保健</td><td>仲景西区</td><td>西区1公寓</td><td>西区2公寓</td></tr><tr><td>健康管理系</td><td>智慧健康养老服务与管理</td><td>孔明校区</td><td>孔明校区1公寓</td><td>孔明校区2公寓</td></tr><tr><td>健康管理系</td><td>食品营养与健康</td><td>孔明校区</td><td>孔明校区1公寓</td><td>孔明校区2公寓</td></tr><tr><td>临床系</td><td>临床医学（其他类）</td><td>仲景西区</td><td>西区1公寓</td><td>西区2公寓</td></tr><tr><td>中医系</td><td>中医学（其他类）</td><td>仲景东区</td><td>东区1公寓</td><td>东区2公寓</td></tr><tr><td>针骨系</td><td>针灸推拿（其他类）</td><td>仲景东区</td><td>东区1公寓</td><td>东区2公寓</td></tr><tr><td>临床系</td><td>临床医学（河南省大学生村医定向免费培养）</td><td>仲景西区</td><td>西区1公寓</td><td>西区2公寓</td></tr><tr><td>中医系</td><td>中医学（河南省大学生村医定向免费培养）</td><td>仲景东区</td><td>东区1公寓</td><td>东区2公寓</td></tr><tr><td>国教院</td><td>护理（中外合作办学）</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>国教院</td><td>药学（中外合作办学）</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>国教院</td><td>医学影像技术（中外合作办学）</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>康复系</td><td>康复治疗技术</td><td>仲景西区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>药学系</td><td>中草药栽培与加工技术</td><td>仲景东区</td><td>东区3公寓</td><td>东区4公寓</td></tr><tr><td>药品</td><td>药品经营与管理</td><td>孔明校区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr><tr><td>药品</td><td>药品生产技术</td><td>孔明校区</td><td>按校区统一分配</td><td>按校区统一分配</td></tr>'+'</table>'+'<div class="tip">标注「按校区统一分配」的专业，宿舍由学校按校区统一安排，具体楼栋以报到时通知为准。</div>'+'<div class="tip"><strong>校区小科普：</strong>仲景西区、仲景东区相邻（均在北京路一带），孔明校区在卧龙路，距仲景校区约 4 公里。开学报到以通知书上写的校区为准，别跑错啦～</div>'};
 
-D.campusCard={t:"📶 校园卡（含校园网权益）",h:'<div class="tip"><strong>在校学习生活都离不开校园网：</strong>校内 WiFi、宿舍宽带、教务系统使用，都需要校园网账号。提前办好，开学不抓瞎。</div><h5>🎁 新生专属校园卡（含校园网权益）</h5><p>配套校园网权益，涵盖<strong>流量 / 语音</strong>与<strong>宿舍上网</strong>，一站式搞定校内上网和日常通讯。</p><ul class="compact-list"><li><strong>校内 WiFi</strong>：教学楼、图书馆、食堂等区域上网</li><li><strong>宿舍宽带</strong>：宿舍上网，选课、追剧、打游戏都靠它</li><li><strong>教务系统使用</strong>：选课、查成绩都需校园网账号</li><li><strong>流量 + 语音</strong>：手机卡自带，日常通讯不用愁</li></ul><h5>✅ 为什么要线上提前办理？</h5><ul class="compact-list"><li><strong>少排队</strong>：线上提前办理，有效减少开学现场排队。</li><li><strong>享专属福利</strong>：线上办理享有新生专属优惠，开学后线下办理不再享受本次优惠。</li></ul><div class="tip">有需要的同学可以先<strong>加学长微信咨询了解</strong>，线上帮你办好，开学直接能用～</div><div style="margin:14px 0 0"><img src="img/campus-card.jpg" alt="新生校园卡" style="width:100%;border-radius:12px;display:block"></div><div class="tip" style="color:var(--text2);font-size:12px">具体套餐、资费、优惠以运营商和学校最新通知为准；办理前请向学长确认当前活动。</div>'};
+D.campusCard={t:"📶 校园卡（含校园网权益）",h:
+'<div class="cc-banner"><div class="cc-bicon">📶</div><div><div class="cc-btitle">新生专属校园卡</div><div class="cc-bsub">含校园网权益 · 流量 / 语音 + 宿舍上网</div></div></div>'
++'<div class="tip">在校学习生活<strong>都离不开校园网</strong>：校内 WiFi、宿舍宽带、教务系统使用，都需要校园网账号。提前办好，开学不抓瞎。</div>'
++'<h5>🎁 卡内含这些权益</h5>'
++'<div class="cc-grid">'
++'<div class="cc-feat"><span class="cf-ico">📡</span><div class="cf-t">校内 WiFi</div><div class="cf-d">教学楼、图书馆、食堂等区域上网</div></div>'
++'<div class="cc-feat"><span class="cf-ico">🏠</span><div class="cf-t">宿舍宽带</div><div class="cf-d">选课、追剧、打游戏都靠它</div></div>'
++'<div class="cc-feat"><span class="cf-ico">📚</span><div class="cf-t">教务系统使用</div><div class="cf-d">选课、查成绩都需校园网账号</div></div>'
++'<div class="cc-feat"><span class="cf-ico">📱</span><div class="cf-t">流量 + 语音</div><div class="cf-d">手机卡自带，日常通讯不用愁</div></div>'
++'</div>'
++'<h5>✅ 为什么要线上提前办理</h5>'
++'<div class="cc-reasons">'
++'<div class="cc-reason">✅ <span><strong>少排队</strong>：线上提前办理，有效减少开学现场排队。</span></div>'
++'<div class="cc-reason">🎁 <span><strong>享专属福利</strong>：线上办理享新生专属优惠，开学后线下办理不再享受本次优惠。</span></div>'
++'</div>'
++'<div class="cc-contact"><div class="cc-ctitle">🤝 有需要？先加学长微信咨询</div><div class="cc-cdesc">线上帮你办好，开学直接能用～首页点「联系学长」即可扫码加好友。</div></div>'
++'<div class="cc-poster"><img src="img/campus-card.jpg" alt="新生校园卡"><div class="cc-cap">校园卡套餐示例 · 具体套餐、资费、优惠以运营商和学校最新通知为准</div></div>'
++'<div class="cc-note">办理前请向学长确认当前活动；本页信息仅供参考，不构成任何强制或商业承诺。</div>'
+};
 
 // 显示详情
 function showDetail(key){
