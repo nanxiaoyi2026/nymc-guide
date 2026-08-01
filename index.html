@@ -462,6 +462,7 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
   <div class="sec-title">学校介绍</div>
   <div class="card" onclick="showDetail('overview')"><div class="card-content"><h4>🏫 学校简介 / 常用服务</h4><p>70+年办学历史、校区分布、官方平台与重要电话</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('major-list')"><div class="card-content"><h4>📖 全部专业一览</h4><p>26个专业详细介绍 · 培养目标/主干课程/就业方向/学费</p></div><span class="arrow">›</span></div>
+  <div class="card" onclick="showDetail('campusMajor')"><div class="card-content"><h4>🏫 专业校区分布</h4><p>你的专业在哪个校区、属于哪个系</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('plan')"><div class="card-content"><h4>📊 2026河南招生计划</h4><p>河南分专业计划、学费、招生人数</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('plan-out')"><div class="card-content"><h4>📊 2026外省招生计划</h4><p>国标代码13781，外省招生专业、学费</p></div><span class="arrow">›</span></div>
 
@@ -604,6 +605,21 @@ D.luqu={t:"🔍 录取通知查询",h:'<div class="tip"><strong>录取结果分�
 +'<ul class="compact-list"><li>官方<strong>不会</strong>收取任何“录取费、指标费”，凡先交钱再发通知书的都是诈骗。</li><li>核对通知书：通过<strong>南阳医专招生网</strong>或考试院核实本人录取信息，谨防假通知书。</li><li>陌生来电/短信称“补录、内部指标”一律不信，遇可疑情况拨打 110。</li></ul>'
 +'<div class="tip"><strong>南小医说：</strong>查到录取先别急着庆祝，记得核对通知书上的<strong>姓名、专业、校区</strong>，并按要求准备档案、党团关系，开学顺利报到！</div>'};
 
+D.campusMajor={t:"🏫 专业校区分布",h:'<div class="tip"><strong>查到录取后第一件事：看专业在哪个校区！</strong>下表为各院系 / 专业对应的校区（数据以学校最新安排为准）。</div>'
++'<table><tr><th>院系</th><th>专业</th><th>所在校区</th></tr>'
++'<tr><td>临床系</td><td>临床医学</td><td>仲景西区</td></tr>'
++'<tr><td>口腔系</td><td>口腔医学</td><td>仲景西区</td></tr>'
++'<tr><td>护理系</td><td>护理</td><td>仲景西区</td></tr>'
++'<tr><td>护理系</td><td>助产</td><td>仲景西区</td></tr>'
++'<tr><td>中医系</td><td>中医学</td><td>仲景东区</td></tr>'
++'<tr><td>针骨系</td><td>中医骨伤</td><td>仲景东区</td></tr>'
++'<tr><td>针骨系</td><td>针灸推拿</td><td>仲景东区</td></tr>'
++'<tr><td>药学系</td><td>药学</td><td>仲景东区</td></tr>'
++'<tr><td>药学系</td><td>中药学</td><td>仲景东区</td></tr>'
++'<tr><td>健康管理系</td><td>健康管理</td><td>孔明校区</td></tr>'
++'</table>'
++'<div class="tip"><strong>校区小科普：</strong>仲景西区、仲景东区相邻（均在北京路一带），孔明校区在卧龙路，距仲景校区约 4 公里。开学报到以通知书上写的校区为准，别跑错啦～</div>'};
+
 // 显示详情
 function showDetail(key){
   var d=D[key];
@@ -670,6 +686,7 @@ var TOC=[
   {i:"🎖",t:"军训攻略",k:"military"},
   {i:"🏫",t:"学校简介 / 常用服务",k:"overview"},
   {i:"📖",t:"全部专业一览",k:"major-list"},
+  {i:"🏫",t:"专业校区分布",k:"campusMajor"},
   {i:"📊",t:"2026河南招生计划",k:"plan"},
   {i:"📊",t:"2026外省招生计划",k:"plan-out"},
   {i:"📦",t:"快递",k:"express"},
