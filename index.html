@@ -442,10 +442,12 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
     <div class="quick-item" onclick="showDetail('freshman-group')"><div class="qi-icon qi-blue">群</div><div class="qi-label">新生必进</div></div>
     <div class="quick-item" onclick="showDetail('items')"><div class="qi-icon qi-cyan">物</div><div class="qi-label">必带清单</div></div>
     <div class="quick-item" onclick="showDetail('transport')"><div class="qi-icon qi-teal">车</div><div class="qi-label">交通</div></div>
+    <div class="quick-item" onclick="showDetail('luqu')"><div class="qi-icon qi-red">录</div><div class="qi-label">录取查询</div></div>
     <div class="quick-item" onclick="showContactSenior()"><div class="qi-icon qi-pink">联</div><div class="qi-label">联系学长</div></div>
   </div>
 
   <div class="sec-title">新生最关注</div>
+  <div class="card" onclick="showDetail('luqu')"><div class="card-content"><h4>🔍 录取通知查询</h4><p>去哪查、怎么查、通知书邮寄…官方入口</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('dorm')"><div class="card-content"><h4>🏠 宿舍条件怎么样？</h4><p>六人间，有独卫有阳台，有空调有风扇有热水…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('major-change')"><div class="card-content"><h4>🔄 转专业政策</h4><p>大一可申请，笔试+面试，9月和春季各一次…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('zhuanben')"><div class="card-content"><h4>📈 专升本</h4><p>统招专升本含金量最高，可报新乡医学院等…</p></div><span class="arrow">›</span></div>
@@ -586,6 +588,23 @@ D.fraud={t:"⚠ 防诈骗",h:'<h5>常见校园诈骗</h5><ul><li>刷单兼职 �
 
 D.campus={t:"📷 校园实拍",h:'<h5>校园实拍相册</h5><div class="tip">实拍带你“云逛校园”：校门、校园环境、宿舍、全景 AR 都在这里。</div><div class="photo-section"><h4>🌳 校园环境</h4><div class="video-list"><div class="video-item"><video class="campus-video" controls playsinline preload="metadata" src="videos/campus-east-lotus.mp4"></video><div class="photo-cap">仲景东区 · 荷花</div></div><div class="video-item"><video class="campus-video" controls playsinline preload="metadata" src="videos/campus-west-lake.mp4"></video><div class="photo-cap">仲景西区 · 濯心湖</div></div></div></div><div class="photo-section map"><h4>🗺 三大校区地图</h4><div class="tip">三个校区位置不同，提前看地图报到不迷路。孔明校区（中专部）、仲景西区（主校区）、仲景东区。</div><div class="photo-grid"><a class="photo-card" href="img/map-kongming.jpg"><img src="img/map-kongming.jpg" alt="孔明校区地图" loading="lazy"><div class="photo-cap">孔明校区</div></a><a class="photo-card" href="img/map-zhongjing-west.jpg"><img src="img/map-zhongjing-west.jpg" alt="仲景西区地图" loading="lazy"><div class="photo-cap">仲景西区（主校区）</div></a><a class="photo-card" href="img/map-zhongjing-east.jpg"><img src="img/map-zhongjing-east.jpg" alt="仲景东区地图" loading="lazy"><div class="photo-cap">仲景东区</div></a></div></div><div class="photo-section dorm"><h4>🏠 宿舍实拍</h4><div class="photo-grid"><a class="photo-card" href="img/dorm-kongming.jpg"><img src="img/dorm-kongming.jpg" alt="孔明校区宿舍" loading="lazy"><div class="photo-cap">孔明校区宿舍</div></a><a class="photo-card" href="img/dorm-east.jpg"><img src="img/dorm-east.jpg" alt="仲景东区宿舍" loading="lazy"><div class="photo-cap">仲景东区宿舍</div></a><a class="photo-card" href="img/dorm-west.jpg"><img src="img/dorm-west.jpg" alt="仲景西区宿舍" loading="lazy"><div class="photo-cap">仲景西区宿舍</div></a></div></div><div class="photo-section"><h4>🌐 校园全景 / VR</h4><div class="tip">360° 云逛校园：校门、教学楼、宿舍、操场一览无余，可拖拽转动视角。</div><div class="pano-wrap"><iframe class="pano-iframe" src="https://www.720yun.com/t/4a120mb5wug?scene_id=618725" loading="lazy" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div><div class="tip">全景由第三方平台 720云 提供。<a class="pano-link" href="https://www.720yun.com/t/4a120mb5wug?scene_id=618725" target="_blank" rel="noopener">若内嵌无法显示，点此在新标签页打开 ↗</a></div></div>'};
 
+D.luqu={t:"🔍 录取通知查询",h:'<div class="tip"><strong>录取结果分省份、分批次公布，请按自己所在批次查询。</strong>查到“录取”后，通知书由学校通过<strong>邮政 EMS</strong>寄出。</div>'
++'<h5>① 南阳医专招生网（本校录取查询，首选）</h5>'
++'<div class="link-grid"><a class="link-card" href="https://zhaosheng.nymc.edu.cn/ptzklqcx2026.htm" target="_blank"><div class="lc-title">🏫 南阳医专 2026 录取查询</div><div class="lc-desc">输入考生号查询本校录取结果</div></a><a class="link-card" href="https://zhaosheng.nymc.edu.cn/" target="_blank"><div class="lc-title">📋 南阳医专招生网</div><div class="lc-desc">通知公告 / 招生计划 / 录取查询</div></a></div>'
++'<h5>② 河南省教育考试院（官方总入口）</h5>'
++'<div class="link-grid"><a class="link-card" href="https://datacenter.haeea.cn/PagePZQuery/ShowPZLQ.aspx" target="_blank"><div class="lc-title">🔎 河南普通高招录取信息查询</div><div class="lc-desc">考生号+身份证号，查档案状态/录取结果</div></a><a class="link-card" href="https://www.haeea.cn/index.shtml" target="_blank"><div class="lc-title">🏛 河南省教育考试院</div><div class="lc-desc">录取日程、征集志愿等官方发布</div></a></div>'
++'<h5>③ 其他渠道</h5>'
++'<ul class="compact-list"><li><strong>豫事办 APP / 支付宝小程序</strong>：首页“录取查询”</li><li><strong>微信公众号「河南省教育考试院」</strong>：菜单“微服务—录取查询”</li><li><strong>县（市、区）招生考试综合服务大厅</strong>：现场查询</li></ul>'
++'<h5>⏰ 2026 录取时间参考</h5>'
++'<table><tr><th>批次</th><th>查询时间</th></tr><tr><td>提前批</td><td>8月1日—3日</td></tr><tr><td>普通批（专科）</td><td>8月5日—8日</td></tr></table>'
++'<div class="tip">具体以河南省教育考试院和南阳医专招生网最新公告为准；未查到结果多为批次未开始，耐心等待并关注征集志愿。</div>'
++'<h5>📮 通知书邮寄查询</h5>'
++'<p>录取后学校通过<strong>邮政 EMS</strong>寄送通知书。凭<strong>考生号 / 准考证号</strong>查询物流：</p>'
++'<div class="link-grid"><a class="link-card" href="https://www.ems.com.cn/query" target="_blank"><div class="lc-title">📦 邮政 EMS 录取通知书查询</div><div class="lc-desc">ems.com.cn — 输入考生号查物流</div></a><a class="link-card" href="https://www.ems.com.cn/" target="_blank"><div class="lc-title">🏤 中国邮政速递物流</div><div class="lc-desc">官网首页 / 微信服务号提醒</div></a></div>'
++'<h5>⚠ 防骗提醒</h5>'
++'<ul class="compact-list"><li>官方<strong>不会</strong>收取任何“录取费、指标费”，凡先交钱再发通知书的都是诈骗。</li><li>核对通知书：通过<strong>南阳医专招生网</strong>或考试院核实本人录取信息，谨防假通知书。</li><li>陌生来电/短信称“补录、内部指标”一律不信，遇可疑情况拨打 110。</li></ul>'
++'<div class="tip"><strong>南小医说：</strong>查到录取先别急着庆祝，记得核对通知书上的<strong>姓名、专业、校区</strong>，并按要求准备档案、党团关系，开学顺利报到！</div>'};
+
 // 显示详情
 function showDetail(key){
   var d=D[key];
@@ -641,6 +660,7 @@ function scrollToContact(){
 // 二维码目录数据
 var TOC=[
   {i:"🏠",t:"宿舍条件",k:"dorm"},
+  {i:"🔍",t:"录取通知查询",k:"luqu"},
   {i:"🔄",t:"转专业",k:"major-change"},
   {i:"📈",t:"专升本",k:"zhuanben"},
   {i:"💬",t:"新生必进",k:"freshman-group"},
