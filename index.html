@@ -514,6 +514,7 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
       <div style="text-align:center;color:#fff;font-size:13px;padding:20px;">二维码加载中…</div>
     </div>
   </div>
+  <div class="card" onclick="showDetail('fraud')"><div class="card-content"><h4>⚠ 防诈骗</h4><p>刷单、冒充客服、校园贷…新生必看防骗指南</p></div><span class="arrow">›</span></div>
 
   <div class="footer">
     <p>南小医 · 南阳医专新生指南</p>
@@ -707,30 +708,30 @@ function scrollToContact(){
 
 // 二维码目录数据
 var TOC=[
-  {i:"🔍",t:"录取通知查询",k:"luqu"},
-  {i:"🏠",t:"宿舍条件",k:"dorm"},
-  {i:"🔄",t:"转专业",k:"major-change"},
-  {i:"📈",t:"专升本",k:"zhuanben"},
-  {i:"💬",t:"新生必进",k:"freshman-group"},
-  {i:"🎓",t:"奖学金 / 资助",k:"scholarship"},
-  {i:"📅",t:"校历·时间表",k:"calendar"},
-  {i:"🎒",t:"必带清单",k:"items"},
-  {i:"📶",t:"校园卡",k:"campusCard"},
-  {i:"🏫",t:"报到流程",k:"register"},
-  {i:"🚌",t:"交通指南",k:"transport"},
-  {i:"🎖",t:"军训攻略",k:"military"},
-  {i:"🏫",t:"学校简介 / 常用服务",k:"overview"},
-  {i:"📖",t:"全部专业一览",k:"major-list"},
-  {i:"🏫",t:"专业·校区·宿舍",k:"campusMajor"},
-  {i:"📊",t:"2026河南招生计划",k:"plan"},
-  {i:"📊",t:"2026外省招生计划",k:"plan-out"},
-  {i:"📷",t:"校园实拍",k:"campus"},
-  {i:"📦",t:"快递",k:"express"},
-  {i:"🍜",t:"校园美食",k:"food"},
-  {i:"🏅",t:"社团列表",k:"clubs"},
-  {i:"🎉",t:"校园活动",k:"activity"},
-  {i:"🏯",t:"南阳景点",k:"scenic"},
-  {i:"⚠",t:"防诈骗",k:"fraud"}
+  {i:"🔍",t:"录取通知查询",k:"luqu",g:"新生最关注"},
+  {i:"🏠",t:"宿舍条件",k:"dorm",g:"新生最关注"},
+  {i:"🔄",t:"转专业",k:"major-change",g:"新生最关注"},
+  {i:"📈",t:"专升本",k:"zhuanben",g:"新生最关注"},
+  {i:"💬",t:"新生必进",k:"freshman-group",g:"新生最关注"},
+  {i:"🎓",t:"奖学金 / 资助",k:"scholarship",g:"新生最关注"},
+  {i:"📅",t:"校历·时间表",k:"calendar",g:"新生最关注"},
+  {i:"🎒",t:"必带清单",k:"items",g:"入学准备"},
+  {i:"📶",t:"校园卡",k:"campusCard",g:"入学准备"},
+  {i:"🏫",t:"报到流程",k:"register",g:"入学准备"},
+  {i:"🚌",t:"交通指南",k:"transport",g:"入学准备"},
+  {i:"🎖",t:"军训攻略",k:"military",g:"入学准备"},
+  {i:"🏫",t:"学校简介 / 常用服务",k:"overview",g:"学校介绍"},
+  {i:"📖",t:"全部专业一览",k:"major-list",g:"学校介绍"},
+  {i:"🏫",t:"专业·校区·宿舍",k:"campusMajor",g:"学校介绍"},
+  {i:"📊",t:"2026河南招生计划",k:"plan",g:"学校介绍"},
+  {i:"📊",t:"2026外省招生计划",k:"plan-out",g:"学校介绍"},
+  {i:"📷",t:"校园实拍",k:"campus",g:"校园生活"},
+  {i:"📦",t:"快递",k:"express",g:"校园生活"},
+  {i:"🍜",t:"校园美食",k:"food",g:"校园生活"},
+  {i:"🏅",t:"社团列表",k:"clubs",g:"校园生活"},
+  {i:"🎉",t:"校园活动",k:"activity",g:"校园生活"},
+  {i:"🏯",t:"南阳景点",k:"scenic",g:"校园生活"},
+  {i:"⚠",t:"防诈骗",k:"fraud",g:"联系方式"}
 ];
 
 // 构建目录弹层（直接在 body 末尾添加，避免依赖固定 DOM）
@@ -749,8 +750,15 @@ function buildDrawer(){
   headHtml+='</div>';
   
   var bodyHtml="";
+  var prevG="";
   for(var i=0;i<TOC.length;i++){
     var t=TOC[i];
+    if(t.g && t.g!==prevG){
+      var hdStyle="padding:14px 20px 6px;font-size:12px;font-weight:600;color:var(--text2);letter-spacing:1px;";
+      if(prevG!=="") hdStyle+="border-top:1px solid var(--border);margin-top:8px;";
+      bodyHtml+='<div style="'+hdStyle+'">'+t.g+'</div>';
+      prevG=t.g;
+    }
     bodyHtml+='<div onclick="showDetail(\''+t.k+'\');toggleDrawer();" style="display:flex;align-items:center;gap:10px;padding:14px 20px;cursor:pointer;font-size:14px;color:var(--text);border-bottom:1px solid var(--border);">';
     bodyHtml+='<span style="font-size:16px;width:22px;text-align:center;">'+t.i+'</span>';
     bodyHtml+='<span>'+t.t+'</span>';
