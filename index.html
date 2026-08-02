@@ -516,10 +516,6 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
   <div class="sec-title">周边生活</div>
   <div class="card" onclick="showDetail('scenic')"><div class="card-content"><h4>🏯 南阳景点</h4><p>武侯祠、白河湿地、老界岭…学生证半价</p></div><span class="arrow">›</span></div>
 
-  <div class="sec-title">答疑解惑</div>
-  <div class="card" onclick="showDetail('faq')"><div class="card-content"><h4>💬 常见问题</h4><p>有空调吗？有热水吗？可以转专业吗？</p></div><span class="arrow">›</span></div>
-  <div class="card" onclick="showDetail('fraud')"><div class="card-content"><h4>⚠ 防诈骗</h4><p>刷单、校园贷、冒充客服…防骗原则</p></div><span class="arrow">›</span></div>
-
   <div class="sec-title">联系方式</div>
   <div class="contact-card" id="contact">
     <h3>📱 南阳医专微信新生群</h3>
@@ -615,8 +611,6 @@ D["plan-out"]={t:"📊 2026外省招生计划",h:'<p>学校国标代码 <strong>
 
 D.services={t:"📞 常用服务 / 重要联系",h:'<h5>学校官方平台（点击直达）</h5><div class="link-grid"><a class="link-card" href="https://www.nymc.edu.cn/" target="_blank"><div class="lc-title">🏫 学校官网</div><div class="lc-desc">www.nymc.edu.cn</div></a><a class="link-card" href="https://zhaosheng.nymc.edu.cn/" target="_blank"><div class="lc-title">📋 招生网</div><div class="lc-desc">计划·章程·录取查询</div></a><a class="link-card" href="https://jwc.nymc.edu.cn/" target="_blank"><div class="lc-title">📚 教务处</div><div class="lc-desc">校历·教务系统</div></a><a class="link-card" href="http://xsc.nymc.edu.cn/" target="_blank"><div class="lc-title">🧑‍🎓 学生处</div><div class="lc-desc">资助·学工·转专业</div></a><a class="link-card" href="https://www.nymc.edu.cn/szxy.htm" target="_blank"><div class="lc-title">💻 数字校园</div><div class="lc-desc">教学/财务/图书馆/VPN</div></a><a class="link-card" href="https://ywtb.nymc.edu.cn/" target="_blank"><div class="lc-title">🗂 办事大厅</div><div class="lc-desc">一网通办</div></a><a class="link-card" href="https://tsg.nymc.edu.cn/" target="_blank"><div class="lc-title">📖 数字图书馆</div><div class="lc-desc">馆藏检索·数据库</div></a><a class="link-card" href="http://nymc.fanya.chaoxing.com/portal" target="_blank"><div class="lc-title">🎞 网络教学平台</div><div class="lc-desc">课程·学习通</div></a></div><h5>重要电话</h5><div class="tel-grid"><div class="tel-item"><span class="tel-name">招生咨询</span><a class="tel-num" href="tel:037763526359">0377-63526359</a></div><div class="tel-item"><span class="tel-name">招生咨询</span><a class="tel-num" href="tel:037763526059">0377-63526059</a></div><div class="tel-item"><span class="tel-name">总务处（报修）</span><a class="tel-num" href="tel:037763526321">0377-63526321</a></div><div class="tel-item"><span class="tel-name">仲景西区水电班</span><a class="tel-num" href="tel:037763526233">0377-63526233</a></div></div><h5>紧急求助</h5><div class="tip">报警 <strong>110</strong>　急救 <strong>120</strong>　火警 <strong>119</strong><br>校内安全请先联系辅导员或保卫处</div><div class="tip warn"><strong>南小医提醒：</strong>以上链接均为学校官方站点，请认准 <strong>*.nymc.edu.cn</strong> 域名；涉及缴费、个人信息等操作务必通过官方渠道办理。</div>'};
 D.overview.h = D.overview.h + '<div style="height:1px;background:var(--border);margin:18px 0"></div>' + D.services.h;
-
-D.faq={t:"💬 常见问题",h:'<h5>Q：宿舍有空调吗？</h5><p><strong>有空调！也有风扇！</strong>夏天不怕热。</p><h5>Q：宿舍用电功率有限制吗？</h5><p><strong>有。</strong>宿舍限电最大 600W，不要使用大功率电器（如电锅、热得快、电暖器等），否则容易跳闸。</p><h5>Q：宿舍有热水吗？</h5><p><strong>淋浴有热水。</strong>每层还有开水器/直饮水机，打水方便。</p><h5>Q：可以带电脑吗？</h5><p>可以。部分专业需要电脑完成作业。</p><h5>Q：可以转专业吗？</h5><p>可以，大一可申请，需通过笔试+面试。</p><h5>Q：可以专升本吗？</h5><p>可以，大三参加统招专升本考试。</p><h5>Q：学校允许外卖吗？</h5><p>可以点外卖，到校门口取。</p>'};
 
 D.fraud={t:"⚠ 防诈骗",h:'<h5>常见校园诈骗</h5><ul><li>刷单兼职 — 先垫付后返款，必被骗</li><li>冒充客服 — "您的快递有问题…"</li><li>冒充学长学姐 — 推销学习卡</li><li>兼职押金 — 收钱后跑路</li><li>校园贷 — 低息诱惑，实为高利贷</li></ul><h5>防骗原则</h5><ul><li>不轻信：陌生来电、短信、链接</li><li>不透露：身份证号、银行卡、验证码</li><li>不转账：陌生账户不转账</li><li>必核实：可疑信息先核实</li></ul><div class="tip danger"><strong>南小医提醒：</strong>天上不会掉馅饼，馅饼下面是陷阱！遇到可疑情况立即拨打110。</div>'};
 
@@ -746,7 +740,6 @@ var TOC=[
   {i:"🏯",t:"南阳景点",k:"scenic"},
   {i:"🍜",t:"校园美食",k:"food"},
   {i:"📷",t:"校园实拍",k:"campus"},
-  {i:"💬",t:"常见问题",k:"faq"},
   {i:"⚠",t:"防诈骗",k:"fraud"}
 ];
 
