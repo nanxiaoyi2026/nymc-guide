@@ -482,6 +482,7 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
   <div class="card" onclick="showDetail('zhuanben')"><div class="card-content"><h4>📈 专升本</h4><p>统招专升本含金量最高，可报新乡医学院等…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('freshman-group')"><div class="card-content"><h4>💬 新生必进</h4><p>加群答疑、组队拼车、二手闲置…</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('scholarship')"><div class="card-content"><h4>🎓 奖学金 / 资助</h4><p>国家奖学金、助学金、助学贷款、绿色通道…</p></div><span class="arrow">›</span></div>
+  <div class="card" onclick="showDetail('calendar')"><div class="card-content"><h4>📅 校历·时间表</h4><p>2026-2027学年校历、上课时间表</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">入学准备</div>
   <div class="card" onclick="showDetail('items')"><div class="card-content"><h4>🎒 必带物品清单</h4><p>证件、生活用品、医药类…完整清单</p></div><span class="arrow">›</span></div>
@@ -497,23 +498,12 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
   <div class="card" onclick="showDetail('plan')"><div class="card-content"><h4>📊 2026河南招生计划</h4><p>河南分专业计划、学费、招生人数</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('plan-out')"><div class="card-content"><h4>📊 2026外省招生计划</h4><p>国标代码13781，外省招生专业、学费</p></div><span class="arrow">›</span></div>
 
-  <div class="sec-title">📅 校历·时间表</div>
-  <div class="card" onclick="showDetail('calendar')"><div class="card-content"><h4>📅 校历·时间表</h4><p>2026-2027学年校历、上课时间表</p></div><span class="arrow">›</span></div>
-
-  <div class="sec-title">📷 校园实拍</div>
+  <div class="sec-title">校园生活</div>
   <div class="card" onclick="showDetail('campus')"><div class="card-content"><h4>📷 校园实拍</h4><p>校门、校园环境、宿舍、全景 AR…</p></div><span class="arrow">›</span></div>
-
-  <div class="sec-title">生活服务</div>
   <div class="card" onclick="showDetail('express')"><div class="card-content"><h4>📦 快递</h4><p>校内菜鸟驿站，快递地址填写</p></div><span class="arrow">›</span></div>
-
-  <div class="sec-title">🍜 校园美食</div>
   <div class="card" onclick="showDetail('food')"><div class="card-content"><h4>🍜 校园美食</h4><p>校内食堂 + 周边小吃街 + 南阳特产，一次看全</p></div><span class="arrow">›</span></div>
-
-  <div class="sec-title">社团活动</div>
   <div class="card" onclick="showDetail('clubs')"><div class="card-content"><h4>🏅 社团列表</h4><p>40个社团，开学百团大战任你选</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('activity')"><div class="card-content"><h4>🎉 校园活动</h4><p>仲景文化艺术节、校运动会、音乐节…</p></div><span class="arrow">›</span></div>
-
-  <div class="sec-title">周边生活</div>
   <div class="card" onclick="showDetail('scenic')"><div class="card-content"><h4>🏯 南阳景点</h4><p>武侯祠、白河湿地、老界岭…学生证半价</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">联系方式</div>
@@ -717,12 +707,13 @@ function scrollToContact(){
 
 // 二维码目录数据
 var TOC=[
-  {i:"🏠",t:"宿舍条件",k:"dorm"},
   {i:"🔍",t:"录取通知查询",k:"luqu"},
+  {i:"🏠",t:"宿舍条件",k:"dorm"},
   {i:"🔄",t:"转专业",k:"major-change"},
   {i:"📈",t:"专升本",k:"zhuanben"},
   {i:"💬",t:"新生必进",k:"freshman-group"},
   {i:"🎓",t:"奖学金 / 资助",k:"scholarship"},
+  {i:"📅",t:"校历·时间表",k:"calendar"},
   {i:"🎒",t:"必带清单",k:"items"},
   {i:"📶",t:"校园卡",k:"campusCard"},
   {i:"🏫",t:"报到流程",k:"register"},
@@ -731,15 +722,14 @@ var TOC=[
   {i:"🏫",t:"学校简介 / 常用服务",k:"overview"},
   {i:"📖",t:"全部专业一览",k:"major-list"},
   {i:"🏫",t:"专业·校区·宿舍",k:"campusMajor"},
-  {i:"📅",t:"校历·时间表",k:"calendar"},
   {i:"📊",t:"2026河南招生计划",k:"plan"},
   {i:"📊",t:"2026外省招生计划",k:"plan-out"},
+  {i:"📷",t:"校园实拍",k:"campus"},
   {i:"📦",t:"快递",k:"express"},
+  {i:"🍜",t:"校园美食",k:"food"},
   {i:"🏅",t:"社团列表",k:"clubs"},
   {i:"🎉",t:"校园活动",k:"activity"},
   {i:"🏯",t:"南阳景点",k:"scenic"},
-  {i:"🍜",t:"校园美食",k:"food"},
-  {i:"📷",t:"校园实拍",k:"campus"},
   {i:"⚠",t:"防诈骗",k:"fraud"}
 ];
 
