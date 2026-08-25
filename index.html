@@ -490,6 +490,7 @@ html[data-theme="dark"] .tip.danger{background:#450a0a}
   <div class="card" onclick="showDetail('register')"><div class="card-content"><h4>🏫 报到流程</h4><p>报到时间、所需材料、流程步骤</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('transport')"><div class="card-content"><h4>🚌 交通指南</h4><p>火车站 / 高铁站 / 汽车站到校路线</p></div><span class="arrow">›</span></div>
   <div class="card" onclick="showDetail('military')"><div class="card-content"><h4>🎖 军训攻略</h4><p>军训时间、必备物品、注意事项</p></div><span class="arrow">›</span></div>
+  <div class="card" onclick="showDetail('apps')"><div class="card-content"><h4>📱 在校必装 APP</h4><p>学习通、喜鹊儿、云运动…11 款新生刚需软件用途全解</p></div><span class="arrow">›</span></div>
 
   <div class="sec-title">学校介绍</div>
   <div class="card" onclick="showDetail('overview')"><div class="card-content"><h4>🏫 学校简介 / 常用服务</h4><p>70+年办学历史、校区分布、官方平台与重要电话</p></div><span class="arrow">›</span></div>
@@ -603,6 +604,31 @@ D.services={t:"📞 常用服务 / 重要联系",h:'<h5>学校官方平台（点
 D.overview.h = D.overview.h + '<div style="height:1px;background:var(--border);margin:18px 0"></div>' + D.services.h;
 
 D.fraud={t:"⚠ 防诈骗",h:'<h5>常见校园诈骗</h5><ul><li>刷单兼职 — 先垫付后返款，必被骗</li><li>冒充客服 — "您的快递有问题…"</li><li>冒充学长学姐 — 推销学习卡</li><li>兼职押金 — 收钱后跑路</li><li>校园贷 — 低息诱惑，实为高利贷</li></ul><h5>防骗原则</h5><ul><li>不轻信：陌生来电、短信、链接</li><li>不透露：身份证号、银行卡、验证码</li><li>不转账：陌生账户不转账</li><li>必核实：可疑信息先核实</li></ul><div class="tip danger"><strong>南小医提醒：</strong>天上不会掉馅饼，馅饼下面是陷阱！遇到可疑情况立即拨打110。</div>'};
+
+D.apps={t:'📱 在校必装 APP',h:'<p>刚入学不知道该装什么软件？<strong>南小医帮你整理好在校必用 APP</strong>，用途一次讲清，开学少走弯路！</p>'+
+'<ul class="compact-list">'+
+'<li><strong>✅ 学习通</strong> — 上课签到、接收课件资料、提交网课作业、参加线上测验，校内最核心学习工具；班级加入二维码开学由班委统一发放，<strong>不要自行乱加</strong>。</li>'+
+'<li><strong>✅ WE Learn</strong> — 大学英语官方配套软件，完成听力训练、课后习题，部分单元小测、期末英语考核都会在此完成。</li>'+
+'<li><strong>✅ 智慧职教+</strong> — 医学生专属学习平台，海量医学题库、专业课网课，平时作业、章节测试基本都在这里完成。</li>'+
+'<li><strong>✅ 中国大学MOOC</strong> — 校内计算机课程指定平台，闲暇也可看各大高校公开课拓展知识面。</li>'+
+'<li><strong>✅ 学信网</strong> — 学籍、学历查询核验，征兵报名、毕业相关手续全都要用，<strong>账号密码一定要记牢</strong>。</li>'+
+'<li><strong>✅ 喜鹊儿</strong> — 学校教务系统，查课表、看期末成绩、教学评教、选课抢课，日常高频打开。</li>'+
+'<li><strong>✅ 志愿汇</strong> — 记录志愿服务时长，评优评先、入团入党，志愿时长是重要参考，做志愿活动务必签到。</li>'+
+'<li><strong>✅ 钉钉</strong> — 部分限选课的网课、作业、线上考试会使用，同时接收班级各类通知消息。</li>'+
+'<li><strong>✅ 云运动</strong> — 校园跑打卡专用，跑步数据直接计入体育期末成绩，关乎体育学分。</li>'+
+'<li><strong>✅ 胖乖生活</strong> — 宿舍生活刚需，扫码使用校园饮水机、吹风机、自动贩卖机。</li>'+
+'<li><strong>✅ 铁路12306</strong> — 寒暑假购买往返车票，在这里办理、核验学生优惠资质。</li>'+
+'</ul>'+
+'<div class="tip"><strong>💡 南小医说：</strong>以上 APP 建议开学前就装好，避免报到当天手忙脚乱。</div>'+
+'<h5>📌 新生重要小贴士</h5>'+
+'<ul class="compact-list">'+
+'<li><strong>1. </strong>学习通、智慧职教+ 不要提前搜班级自行加入，耐心等待开学班委下发通知。</li>'+
+'<li><strong>2. </strong>喜鹊儿多留意通知，选课、抢课、教学评教都有截止时间，错过无法补操作。</li>'+
+'<li><strong>3. </strong>云运动校园跑看清开放时段，别等到期末集中突击，防止系统卡顿完不成任务、丢失体育学分。</li>'+
+'<li><strong>4. </strong>使用志愿汇参与志愿，一定要现场完成签到+签退，不然时长无效，评优不予认可。</li>'+
+'<li><strong>5. </strong>WE Learn 英语课程及时完成任务点，部分内容计入平时成绩，不要堆积到最后。</li>'+
+'<li><strong>6. </strong>所有 APP 账号密码建议截图备份保存，避免后续找回账号浪费时间。</li>'+
+'</ul>'};
 
 D.campus={t:"📷 校园实拍",h:'<h5>校园实拍相册</h5><div class="tip">实拍带你“云逛校园”：校门、校园环境、宿舍、全景 AR 都在这里。</div><div class="photo-section"><h4>🌳 校园环境</h4><div class="video-list"><div class="video-item"><video class="campus-video" controls playsinline preload="metadata" src="videos/campus-east-lotus.mp4"></video><div class="photo-cap">仲景东区 · 荷花</div></div><div class="video-item"><video class="campus-video" controls playsinline preload="metadata" src="videos/campus-west-lake.mp4"></video><div class="photo-cap">仲景西区 · 濯心湖</div></div></div></div><div class="photo-section map"><h4>🗺 三大校区地图</h4><div class="tip">三个校区位置不同，提前看地图报到不迷路。孔明校区（中专部）、仲景西区（主校区）、仲景东区。</div><div class="photo-grid"><a class="photo-card" href="img/map-kongming.jpg"><img src="img/map-kongming.jpg" alt="孔明校区地图" loading="lazy"><div class="photo-cap">孔明校区</div></a><a class="photo-card" href="img/map-zhongjing-west.jpg"><img src="img/map-zhongjing-west.jpg" alt="仲景西区地图" loading="lazy"><div class="photo-cap">仲景西区（主校区）</div></a><a class="photo-card" href="img/map-zhongjing-east.jpg"><img src="img/map-zhongjing-east.jpg" alt="仲景东区地图" loading="lazy"><div class="photo-cap">仲景东区</div></a></div></div><div class="photo-section dorm"><h4>🏠 宿舍实拍</h4><div class="photo-grid"><a class="photo-card" href="img/dorm-kongming.jpg"><img src="img/dorm-kongming.jpg" alt="孔明校区宿舍" loading="lazy"><div class="photo-cap">孔明校区宿舍</div></a><a class="photo-card" href="img/dorm-east.jpg"><img src="img/dorm-east.jpg" alt="仲景东区宿舍" loading="lazy"><div class="photo-cap">仲景东区宿舍</div></a><a class="photo-card" href="img/dorm-west.jpg"><img src="img/dorm-west.jpg" alt="仲景西区宿舍" loading="lazy"><div class="photo-cap">仲景西区宿舍</div></a></div></div><div class="photo-section"><h4>🌐 校园全景 / VR</h4><div class="tip">360° 云逛校园：校门、教学楼、宿舍、操场一览无余，可拖拽转动视角。</div><div class="pano-wrap"><iframe class="pano-iframe" src="https://www.720yun.com/t/4a120mb5wug?scene_id=618725" loading="lazy" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div><div class="tip">全景由第三方平台 720云 提供。<a class="pano-link" href="https://www.720yun.com/t/4a120mb5wug?scene_id=618725" target="_blank" rel="noopener">若内嵌无法显示，点此在新标签页打开 ↗</a></div></div>'};
 
@@ -718,6 +744,7 @@ var TOC=[
   {i:"🏫",t:"报到流程",k:"register",g:"入学准备"},
   {i:"🚌",t:"交通指南",k:"transport",g:"入学准备"},
   {i:"🎖",t:"军训攻略",k:"military",g:"入学准备"},
+  {i:"📱",t:"在校必装APP",k:"apps",g:"入学准备"},
   {i:"🏫",t:"学校简介 / 常用服务",k:"overview",g:"学校介绍"},
   {i:"📖",t:"全部专业一览",k:"major-list",g:"学校介绍"},
   {i:"📊",t:"2026河南招生计划",k:"plan",g:"学校介绍"},
